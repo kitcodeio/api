@@ -3,12 +3,13 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const config = require('./config.json');
-const api = require('./lib/api');
+const routes = require('./lib/routes');
 
 const app = express();
 const env = process.env.NODE_ENV || 'development';
 
 app.use(cors());
+app.use(routes);
 app.use(bodyParser.json());
 
 async function start() {

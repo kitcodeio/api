@@ -23,8 +23,8 @@ var newSchema = new Schema({
     }
   },
   'password' : { type: String, default: null, select: false },
-  'salt' : { type: String, required: true, select: false },
-  'passwordhash' : { type: String, required: true, select: false },
+  'salt' : { type: String, required: true },
+  'passwordhash' : { type: String, required: true },
   'createdAt': { type: Date, default: Date.now },
   'updatedAt': { type: Date, default: Date.now }
 });
