@@ -1,0 +1,22 @@
+{
+  "name": "kitcode-server",
+  "version": "1.0.0",
+  "description": "kitcode-sdk",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/kitcodestarlly/kitcode-server.git"
+  },
+  "author": "Kitcode Pvt. Ltd.",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/kitcodestarlly/kitcode-server#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dockerode": "^2.5.5",
+    "express": "^4.16.3"
+  }
+}
