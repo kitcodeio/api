@@ -32,7 +32,7 @@ var newSchema = new Schema({
 newSchema.pre('validate', function(next){
   this.salt = crypto.generateSalt();
   this.passwordhash = crypto.md5(this.password, this.salt);
-  this.password = null; 
+  this.password = null;
   next();
 });
 
