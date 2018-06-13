@@ -22,9 +22,9 @@ var newSchema = new Schema({
       message: '{VALUE} is not a valid email address!'
     }
   },
-  'password' : { type: String, default: null },
-  'salt' : { type: String, required: true },
-  'passwordhash' : { type: String, required: true },
+  'password' : { type: String, default: null, select: false },
+  'salt' : { type: String, required: true, select: false },
+  'passwordhash' : { type: String, required: true, select: false },
   'createdAt': { type: Date, default: Date.now },
   'updatedAt': { type: Date, default: Date.now }
 });
