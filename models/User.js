@@ -11,7 +11,6 @@ if (mongoose.connection.readyState === 0) {
 var newSchema = new Schema({
   
   'name': { type: String, required: true },
-  'username': { type: String, unique: true, required: true },
   'email' : { 
     type: String,
     required: true,
@@ -22,6 +21,7 @@ var newSchema = new Schema({
       message: '{VALUE} is not a valid email address!'
     }
   },
+  'phone' : { type: String },
   'password' : { type: String, default: null, select: false },
   'salt' : { type: String, required: true },
   'passwordhash' : { type: String, required: true },
