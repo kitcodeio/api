@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         isEmail: true
       }
     },
-    passwordhash: DataTypes.STRING,
+    password_hash: DataTypes.STRING,
     salt: DataTypes.STRING,
     verified: DataTypes.BOOLEAN
   }, {

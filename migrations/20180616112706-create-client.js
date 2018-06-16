@@ -17,7 +17,7 @@ module.exports = {
 	  isEmail: true
 	}
       },
-      passwordhash: {
+      password_hash: {
         type: Sequelize.STRING
       },
       salt: {
