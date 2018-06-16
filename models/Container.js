@@ -7,8 +7,8 @@ if (mongoose.connection.readyState === 0) {
 
 var newSchema = new Schema({
   
-  'user_id' : { type: String },
-  'label' : { type: String },
+  'image_id': { type: String },
+  'container_id': { type: String, unique: true },
   'createdAt': { type: Date, default: Date.now },
   'updatedAt': { type: Date, default: Date.now }
 });
@@ -28,4 +28,4 @@ newSchema.pre('findOneAndUpdate', function() {
 
 
 
-module.exports = mongoose.model('Image', newSchema);
+module.exports = mongoose.model('Container', newSchema);
