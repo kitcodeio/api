@@ -4,9 +4,8 @@ module.exports = {
     return queryInterface.createTable('Containers', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       image_id: {
         type: Sequelize.STRING,

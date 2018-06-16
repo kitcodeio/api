@@ -7,7 +7,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.STRING
       },
-      user_id: {
+      client_id: {
         type: Sequelize.STRING,
 	references: {
 	  model: 'Clients',
