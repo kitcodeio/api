@@ -3,7 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const jwt = require('express-jwt');
 
-const config = require('./config.json');
+const config = require('./config/serverconfig.json');
 const routes = require('./lib/routes');
 const errorHandler = require('./lib/errorHandler');
 
