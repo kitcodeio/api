@@ -7,6 +7,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.STRING
       },
+      label: {
+        type: Sequelize.STRING,
+	defaultValue: 'Untitled'
+      },
       client_id: {
         type: Sequelize.STRING,
 	references: {

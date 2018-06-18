@@ -14,10 +14,11 @@ app.use(cors());
 app.use(jwt({
   secret: config[env].jwtsecret
 }).unless({
-  path: ['/login','/create/User']
+  path: ['/login','/register']
 }));
 app.use(bodyParser.json());
 app.use(routes);
+
 app.use(errorHandler);
 
 async function start() {

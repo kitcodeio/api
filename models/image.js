@@ -5,6 +5,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true
+    },
+    label: {
+      type: DataTypes.STRING,
+      defaultValue: 'Untitled'
     }
   }, {});
   Image.associate = function(models) {
