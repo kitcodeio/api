@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "rootrootroot",
     "database": "kitcode",
-    "host": "127.0.0.1",
+    "host": "kitcode.citivslqxvsf.ap-south-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases" : false,
     "logging": false
