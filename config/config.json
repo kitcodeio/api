@@ -8,12 +8,14 @@
     "operatorsAliases" : false,
     "logging": false
   },
-  "test": {
+  "local": {
     "username": "root",
-    "password": null,
-    "database": "database_test",
+    "password": "root",
+    "database": "kitcode",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "operatorsAliases" : false,
+    "logging": false
   },
   "production": {
     "username": "root",
