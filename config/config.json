@@ -1,5 +1,5 @@
 {
-  "development": {
+  "remote": {
     "username": "root",
     "password": "rootrootroot",
     "database": "kitcode",
@@ -8,7 +8,7 @@
     "operatorsAliases" : false,
     "logging": false
   },
-  "local": {
+  "development": {
     "username": "root",
     "password": "root",
     "database": "kitcode",
