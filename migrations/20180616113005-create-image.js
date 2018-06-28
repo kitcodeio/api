@@ -13,10 +13,10 @@ module.exports = {
       },
       client_id: {
         type: Sequelize.STRING,
-	references: {
-	  model: 'Clients',
+        references: {
+          model: 'Clients',
           key: 'id'
-	}
+        }
       },
       createdAt: {
         allowNull: false,
