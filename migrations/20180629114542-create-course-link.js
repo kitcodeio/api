@@ -10,7 +10,7 @@ module.exports = {
       title: {
         type: Sequelize.STRING
       },
-      {
+      index: {
         type: Sequelize.INTEGER
       },
       course_id: {
