@@ -7,12 +7,15 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.STRING
       },
+      title: {
+        type: Sequelize.STRING
+      },
       course_id: {
         type: Sequelize.INTEGER,
         references: {
-	  model: 'Courses',
-	  key: 'id'
-	}
+          model: 'Courses',
+          key: 'id'
+        }
       }
     });
   },
