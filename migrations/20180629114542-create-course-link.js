@@ -10,6 +10,9 @@ module.exports = {
       title: {
         type: Sequelize.STRING
       },
+      {
+        type: Sequelize.INTEGER
+      },
       course_id: {
         type: Sequelize.INTEGER,
         references: {
