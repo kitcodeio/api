@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.use(jwt({
   secret: config[env].jwtsecret
 }).unless({
-  path: ['/login','/register']
+  path: ['/login','/register','/submit']
 }));
 app.use(bodyParser.json());
 app.use(routes);
