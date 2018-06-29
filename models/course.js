@@ -6,7 +6,9 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false
   });
   Course.associate = function(models) {
-    // associations can be defined here
+    Course.hasMany(models.CourseLink, {
+      foreignKey: 'course_id'
+    });
   };
   return Course;
 };
