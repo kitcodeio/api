@@ -1,7 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var CourseLink = sequelize.define('CourseLink', {
-    link: DataTypes.STRING
+    link: {
+      type: DataTypes.STRING,
+      primaryKey: true,
+      allowNull: false
+    }
   }, {
     timestamps: false
   });
