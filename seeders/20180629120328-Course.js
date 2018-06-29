@@ -3,13 +3,13 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Courses', [{
-      name: 'Node.js'
+      label: 'Node.js'
     }, {
-      name: 'Python'
+      label: 'Python'
     }, {
-      name: 'Tensorflow'
+      label: 'Tensorflow'
     }, {
-      name: 'Watson'
+      label: 'Watson'
     }], {});
   },
 
