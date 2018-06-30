@@ -142,7 +142,7 @@ fi
 
 
 ln -s $sitesAvailable$user $sitesEnable$user
-service nginx restart
+service nginx reload
 echo -e $"Complete! \nYou now have a new Virtual Host \nYour new host is: http://$user \nAnd its located at $userDir$rootDir"
 exit;
 
