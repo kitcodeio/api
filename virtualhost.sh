@@ -56,13 +56,13 @@ server {
  
   listen [::]:80; 
  
-  server_name ${user}-terminal.local; 
+  server_name ${user}-terminal.kitcode.io; 
  
   location / { 
 
-                proxy_pass http://$ip:9090; 
- 
-                proxy_http_version 1.1; 
+                proxy_pass http://$ip:9090;
+                
+		proxy_http_version 1.1; 
  
                 proxy_set_header Upgrade \$http_upgrade; 
  
