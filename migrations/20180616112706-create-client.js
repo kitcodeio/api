@@ -5,6 +5,7 @@ module.exports = {
       id: {
         allowNull: false,
         primaryKey: true,
+	unique: true,
         type: Sequelize.STRING
       },
       name: {
@@ -25,6 +26,15 @@ module.exports = {
       },
       verified: {
         type: Sequelize.BOOLEAN
+      },
+      subdomain: {
+        type: Sequelize.STRING,
+	allowNull: false,
+	unique: true,
+	reference: {
+	  model: 'subdomain',
+          key: 'salt'
+	}
       },
       createdAt: {
         allowNull: false,

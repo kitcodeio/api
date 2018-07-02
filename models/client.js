@@ -9,7 +9,8 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
-      primaryKey: true
+      primaryKey: true,
+      unique: true
     },
     name: DataTypes.STRING,
     email: {
@@ -20,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     password_hash: DataTypes.STRING,
     salt: DataTypes.STRING,
-    verified: DataTypes.BOOLEAN
+    verified: DataTypes.BOOLEAN,
   }, {
     getterMethods: {
       token() {
@@ -38,6 +39,9 @@ module.exports = (sequelize, DataTypes) => {
   Client.associate = function(models) {
     Client.hasMany(models.Image, {
       foreignKey: 'client_id'
+    });
+    Client.belongsTo(models.Subdomain, {
+      foreignKey: 'subdomain'
     });
   };
   return Client;
