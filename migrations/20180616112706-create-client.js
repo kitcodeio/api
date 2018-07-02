@@ -32,7 +32,7 @@ module.exports = {
 	allowNull: false,
 	unique: true,
 	reference: {
-	  model: 'subdomain',
+	  model: 'Subdomains',
           key: 'salt'
 	}
       },
