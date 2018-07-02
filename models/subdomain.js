@@ -7,9 +7,9 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false
   });
   Subdomain.associate = function(models) {
-    Subdomain.hasMany(models.Cient,{
+    Subdomain.hasMany(models.Client,{
       foreignKey: 'subdomain'
     });
   };
-  return subdomain;
+  return Subdomain;
 };
