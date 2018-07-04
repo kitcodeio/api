@@ -12,8 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false
   });
   CourseLink.associate = function(models) {
-    CourseLink.belongsTo(models.Course, {
-      foreignKey: 'course_id'
+    CourseLink.belongsTo(models.CourseSection, {
+      foreignKey: 'section_id'
     });
   };
   return CourseLink;

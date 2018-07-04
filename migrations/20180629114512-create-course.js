@@ -13,6 +13,9 @@ module.exports = {
       },
       description: {
         type: Sequelize.STRING
+      },
+      logo: {
+        type: Sequelize.STRING
       }
     });
   },
