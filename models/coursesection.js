@@ -9,10 +9,10 @@ module.exports = (sequelize, DataTypes) => {
   CourseSection.associate = function(models) {
     CourseSection.hasMany(models.CourseChapter, {
       foreignKey: 'section_id'
-    });    
-	  
+    });
+
     CourseSection.belongsTo(models.Course, {
-      'course_id'
+      foreignKey: 'course_id'
     });
   };
   return CourseSection;

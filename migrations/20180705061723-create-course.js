@@ -13,8 +13,8 @@ module.exports = {
       },
       category_id: {
         type: Sequelize.INTEGER,
-	reference: {
-	  model: 'CourseCategorys',
+	references: {
+	  model: 'CourseCategories',
 	  key: 'id'
 	}
       },
@@ -23,7 +23,7 @@ module.exports = {
       },
       image_id: {
         type: Sequelize.STRING,
-	reference: {
+	references: {
 	  model: 'Images',
 	  key: 'id' 
 	}
