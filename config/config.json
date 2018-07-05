@@ -10,7 +10,7 @@
   },
   "development": {
     "username": "root",
-    "password": "bonnie",
+    "password": "root",
     "database": "kitcode",
     "host": "127.0.0.1",
     "dialect": "mysql",

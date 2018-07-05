@@ -8,17 +8,17 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      label: {
+        type: Sequelize.STRING
+      },
       course_id: {
         type: Sequelize.INTEGER,
-	reference:{
+	reference: {
 	  model: 'Courses',
 	  key: 'id'
 	}
       },
-      detail: {
-        type: Sequelize.STRING
-      },
-      name: {
+      description: {
         type: Sequelize.STRING
       }
     });

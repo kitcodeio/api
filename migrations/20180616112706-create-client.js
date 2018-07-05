@@ -18,6 +18,9 @@ module.exports = {
 	  isEmail: true
 	}
       },
+      role_type: {
+        type: Sequelize.STRING
+      },
       password_hash: {
         type: Sequelize.STRING
       },
