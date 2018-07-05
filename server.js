@@ -12,11 +12,11 @@ const env = process.env.NODE_ENV || 'development';
 
 app.use(cors());
 app.use(express.static('public'));
-app.use(jwt({
+/*app.use(jwt({
   secret: config[env].jwtsecret
 }).unless({
   path: ['/login','/register','/submit']
-}));
+}));*/
 app.use(bodyParser.json());
 app.use(routes);
 
