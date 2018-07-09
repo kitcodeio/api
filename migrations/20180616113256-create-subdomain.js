@@ -9,7 +9,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       salt: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+	unique: true
       },
       occupied: {
         type: Sequelize.BOOLEAN
@@ -17,6 +18,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('subdomains');
+    return queryInterface.dropTable('Subdomains');
   }
 };

@@ -29,16 +29,7 @@ module.exports = {
       },
       verified: {
         type: Sequelize.BOOLEAN
-      },
-      subdomain: {
-        type: Sequelize.STRING,
-	allowNull: false,
-	unique: true,
-	reference: {
-	  model: 'Subdomains',
-          key: 'salt'
-	}
-      },
+      }, 
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

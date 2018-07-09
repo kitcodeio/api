@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
     Course.hasMany(models.CourseSection, {
       foreignKey: 'course_id'
     });
+    
+    Course.hasMany(models.Conatainer, {
+      foreignKey: 'course_id'
+    });
 
     Course.belongsTo(models.Image, {
       foreignKey: 'image_id'

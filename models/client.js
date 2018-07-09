@@ -41,8 +41,8 @@ module.exports = (sequelize, DataTypes) => {
     Client.hasMany(models.Image, {
       foreignKey: 'client_id'
     });
-    Client.belongsTo(models.Subdomain, {
-      foreignKey: 'subdomain'
+    Client.hasMany(models.Subdomain, {
+      foreignKey: 'client_id'
     });
   };
   return Client;

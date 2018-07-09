@@ -14,6 +14,27 @@ module.exports = {
 	  key: 'id'
 	}
       },
+      course_id: {
+        type: Sequelize.INTEGER,
+	references: {
+	  model: 'Courses',
+	  key: 'id'
+	}
+      },
+      client_id: {
+        type: Sequelize.STRING,
+	references: {
+	  model: 'Clients',
+	  key: 'id'
+	}
+      },
+      subdomain: {
+        type: Sequelize.STRING,
+	references: {
+	  model: 'Subdomains',
+	  key: 'salt'
+	}
+      },
       container_id: {
         type: Sequelize.STRING
       },
