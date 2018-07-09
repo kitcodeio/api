@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'course_id'
     });
     
-    Course.hasMany(models.Conatainer, {
+    Course.hasMany(models.Container, {
       foreignKey: 'course_id'
     });
 

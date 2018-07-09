@@ -18,6 +18,9 @@ module.exports = (sequelize, DataTypes) => {
     Image.hasMany(models.Container, {
       foreignKey: 'image_id'
     });
+    Image.hasMany(models.Course, {
+      foreignKey: 'image_id'
+    });
   };
   return Image;
 };
