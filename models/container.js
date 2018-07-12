@@ -7,9 +7,9 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true
     },
     container_id: DataTypes.STRING,
-    ip: DataTypes.STRING
+    ip: DataTypes.STRING,
     active: {
-      type: DataTypes.BOOLEAN
+      type: DataTypes.BOOLEAN,
       defaultValue: true
     }
   }, {});
