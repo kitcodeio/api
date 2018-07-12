@@ -6,14 +6,19 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: DataTypes.UUIDV1,
       primaryKey: true
     },
-    container_id: DataTypes.STRING
+    container_id: DataTypes.STRING,
+    ip: DataTypes.STRING
+    active: {
+      type: DataTypes.BOOLEAN
+      defaultValue: true
+    }
   }, {});
   Container.associate = function(models) {
-    
+
     Container.belongsTo(models.Image, {
       foreignKey: 'image_id'
     });
-    
+
     Container.belongsTo(models.Client, {
       foreignKey: 'client_id'
     });
@@ -21,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     Container.belongsTo(models.Course, {
       foreignKey: 'course_id'
     });
-    
+
     Container.belongsTo(models.Subdomain, {
       foreignKey: 'subdomain'
     });

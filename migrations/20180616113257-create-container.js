@@ -9,34 +9,41 @@ module.exports = {
       },
       image_id: {
         type: Sequelize.STRING,
-	references: {
-	  model: 'Images',
-	  key: 'id'
-	}
+        references: {
+          model: 'Images',
+          key: 'id'
+        }
       },
       course_id: {
         type: Sequelize.INTEGER,
-	references: {
-	  model: 'Courses',
-	  key: 'id'
-	}
+        references: {
+          model: 'Courses',
+          key: 'id'
+        }
       },
       client_id: {
         type: Sequelize.STRING,
-	references: {
-	  model: 'Clients',
-	  key: 'id'
-	}
+        references: {
+          model: 'Clients',
+          key: 'id'
+        }
       },
       subdomain: {
         type: Sequelize.STRING,
-	references: {
-	  model: 'Subdomains',
-	  key: 'salt'
-	}
+        references: {
+          model: 'Subdomains',
+          key: 'salt'
+        }
       },
       container_id: {
         type: Sequelize.STRING
+      },
+      ip: {
+        type: Sequelize.STRING
+      },
+      active: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
       },
       createdAt: {
         allowNull: false,
