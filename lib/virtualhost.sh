@@ -29,7 +29,7 @@ if ! echo "server {
  
   location / { 
 
-                proxy_pass http://$ip:8080; 
+                proxy_pass http://$ip:54123; 
  
                 proxy_http_version 1.1; 
  
