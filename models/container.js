@@ -8,16 +8,12 @@ module.exports = (sequelize, DataTypes) => {
     },
     container_id: DataTypes.STRING,
     ip: DataTypes.STRING,
-    active: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: true
+    state: {
+      type: DataTypes.STRING,
+      defaultValue: 'idle'
     }
   }, {});
   Container.associate = function(models) {
-
-    Container.belongsTo(models.Image, {
-      foreignKey: 'image_id'
-    });
 
     Container.belongsTo(models.Client, {
       foreignKey: 'client_id'

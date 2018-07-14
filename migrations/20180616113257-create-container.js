@@ -7,13 +7,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.STRING
       },
-      image_id: {
-        type: Sequelize.STRING,
-        references: {
-          model: 'Images',
-          key: 'id'
-        }
-      },
       course_id: {
         type: Sequelize.INTEGER,
         references: {
@@ -41,9 +34,9 @@ module.exports = {
       ip: {
         type: Sequelize.STRING
       },
-      active: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: true
+      state: {
+        type: Sequelize.STRING,
+        defaultValue: 'idle'
       },
       createdAt: {
         allowNull: false,
