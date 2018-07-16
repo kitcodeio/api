@@ -60,7 +60,7 @@ server {
  
   location / { 
 
-                proxy_pass http://$ip:9090;
+                proxy_pass http://$ip:54124;
                 
 		proxy_http_version 1.1; 
  
