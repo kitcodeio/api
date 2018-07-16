@@ -3,20 +3,20 @@
 TEXTDOMAIN=virtualhost
 
 ### Set default parameters
-user=$1
+domain=$1
 ip=$2
 owner=$(who am i | awk '{print $1}')
 sitesEnable='/etc/nginx/sites-enabled/'
 sitesAvailable='/etc/nginx/sites-available/'
-userDir='/var/www/'
+domainDir='/var/www/'
 
 if [ "$(whoami)" != 'root' ]; then
-	echo $"You have no permission to run $0 as non-root user. Use sudo"
+	echo $"You have no permission to run $0 as non-root domain. Use sudo"
 		exit 1;
 fi
 
-if [ -e $sitesAvailable$user ]; then
-	echo -e $"This user already exists.\nPlease Try Another one"
+if [ -e $sitesAvailable$domain ]; then
+	echo -e $"This domain already exists.\nPlease Try Another one"
 	exit;
 fi
 
@@ -25,7 +25,7 @@ if ! echo "server {
  
   listen [::]:80; 
  
-  server_name ${user}-kide.kitcode.io; 
+  server_name ${domain}-kide.kitcode.io; 
  
   location / { 
 
@@ -56,7 +56,7 @@ server {
  
   listen [::]:80; 
  
-  server_name ${user}-terminal.kitcode.io; 
+  server_name ${domain}-terminal.kitcode.io; 
  
   location / { 
 
@@ -87,7 +87,7 @@ server {
  
   listen [::]:80; 
  
-  server_name ${user}-app.kitcode.io; 
+  server_name ${domain}-app.kitcode.io; 
  
   location / { 
 
@@ -110,29 +110,29 @@ server {
                 proxy_cache_bypass \$http_upgrade; 
   } 
  
-}" > $sitesAvailable$user
+}" > $sitesAvailable$domain
 	then
-		echo -e $"There is an ERROR create $user file"
+		echo -e $"There is an ERROR create $domain file"
 		exit;
 	else
 		echo -e $"\nNew Virtual Host Created\n"
 fi
 
-if ! echo "127.0.0.1	${user}-kide.kitcode.io" >> /etc/hosts
+if ! echo "127.0.0.1	${domain}-kide.kitcode.io" >> /etc/hosts
 	then
 		echo $"ERROR: Not able write in /etc/hosts"
 		exit;
 else
 	echo -e $"Host added to /etc/hosts file \n"
 fi
-if ! echo "127.0.0.1	${user}-terminal.kitcode.io" >> /etc/hosts
+if ! echo "127.0.0.1	${domain}-terminal.kitcode.io" >> /etc/hosts
 	then
 		echo $"ERROR: Not able write in /etc/hosts"
 		exit;
 else
 	echo -e $"Host added to /etc/hosts file \n"
 fi
-if ! echo "127.0.0.1	${user}-app.kitcode.io" >> /etc/hosts
+if ! echo "127.0.0.1	${domain}-app.kitcode.io" >> /etc/hosts
 	then
 		echo $"ERROR: Not able write in /etc/hosts"
 		exit;
@@ -141,8 +141,8 @@ else
 fi
 
 
-ln -s $sitesAvailable$user $sitesEnable$user
+ln -s $sitesAvailable$domain $sitesEnable$domain
 service nginx reload
-echo -e $"Complete! \nYou now have a new Virtual Host \nYour new host is: http://$user \nAnd its located at $userDir$rootDir"
+echo -e $"Complete! \nYou now have a new Virtual Host \nYour new host is: http://$domain \nAnd its located at $domainDir$rootDir"
 exit;
 
