@@ -1,7 +1,8 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var CourseCategory = sequelize.define('CourseCategory', {
-    label: DataTypes.STRING
+    label: DataTypes.STRING,
+    logo: DataTypes.STRING
   }, {
     timestamps: false
   });
