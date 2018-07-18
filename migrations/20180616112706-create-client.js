@@ -5,31 +5,38 @@ module.exports = {
       id: {
         allowNull: false,
         primaryKey: true,
-	unique: true,
+        unique: true,
         type: Sequelize.STRING
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       email: {
         type: Sequelize.STRING,
-	unique: true,
-	validate: {
-	  isEmail: true
-	}
+        unique: true,
+        allowNull: false,
+        validate: {
+          isEmail: true
+        }
       },
       role_type: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       password_hash: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       salt: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       verified: {
-        type: Sequelize.BOOLEAN
-      }, 
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -7,10 +7,11 @@ const config = require('../config/serverconfig.json');
 module.exports = (sequelize, DataTypes) => {
   var Client = sequelize.define('Client', {
     id: {
-      type: DataTypes.UUID,
+      type: DataTypes.STRING,
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
-      unique: true
+      unique: true,
+      allowNull: false
     },
     name: DataTypes.STRING,
     email: {
@@ -19,10 +20,23 @@ module.exports = (sequelize, DataTypes) => {
         isEmail: true
       }
     },
-    role_type: DataTypes.STRING,
-    password_hash: DataTypes.STRING,
-    salt: DataTypes.STRING,
-    verified: DataTypes.BOOLEAN,
+    role_type: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    password_hash: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    salt: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    verified: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    },
   }, {
     getterMethods: {
       token() {
@@ -32,7 +46,7 @@ module.exports = (sequelize, DataTypes) => {
           id: this.id,
           name: this.name,
           email: this.email,
-	  role_type: this.role_type,
+          role_type: this.role_type,
           exp: parseInt(expiry.getTime() / 1000)
         }, config[env].jwtsecret);
       }
