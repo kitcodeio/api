@@ -1,8 +1,14 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Course = sequelize.define('Course', {
-    label: DataTypes.STRING,
-    description: DataTypes.STRING,
+    label: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
   }, {
     timestamps: false
   });
@@ -10,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     Course.hasMany(models.CourseSection, {
       foreignKey: 'course_id'
     });
-    
+
     Course.hasMany(models.Container, {
       foreignKey: 'course_id'
     });

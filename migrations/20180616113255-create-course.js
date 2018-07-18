@@ -9,24 +9,28 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       label: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       category_id: {
         type: Sequelize.INTEGER,
-	references: {
-	  model: 'CourseCategories',
-	  key: 'id'
-	}
+        allowNull: false,
+        references: {
+          model: 'CourseCategories',
+          key: 'id'
+        }
       },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       image_id: {
         type: Sequelize.STRING,
-	references: {
-	  model: 'Images',
-	  key: 'id' 
-	}
+        allowNull: false,
+        references: {
+          model: 'Images',
+          key: 'id'
+        }
       }
     });
   },

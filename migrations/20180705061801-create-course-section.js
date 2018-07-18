@@ -9,17 +9,20 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       label: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       course_id: {
         type: Sequelize.INTEGER,
+	allowNull: false,
 	references: {
 	  model: 'Courses',
 	  key: 'id'
 	}
       },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+	allowNull: false
       }
     });
   },

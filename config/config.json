@@ -1,9 +1,9 @@
 {
-  "remote": {
+  "local": {
     "username": "root",
-    "password": "rootrootroot",
+    "password": "root",
     "database": "kitcode",
-    "host": "kitcode.citivslqxvsf.ap-south-1.rds.amazonaws.com",
+    "host": "localhost",
     "dialect": "mysql",
     "operatorsAliases" : false,
     "logging": false
