@@ -10,7 +10,13 @@ module.exports = {
       },
       name: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        validate: {
+          is: {
+            args: /^([^0-9!<@#$%^,&*\-`~()_+=\/\\?}\]{\[>]*)$/,
+            msg: 'oops! that doesn\'t look like a real name'
+          }
+        }
       },
       email: {
         type: Sequelize.STRING,

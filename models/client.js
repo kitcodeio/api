@@ -15,7 +15,13 @@ module.exports = (sequelize, DataTypes) => {
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        is: {
+          args: /^([^0-9!<@#$%^,&*\-`~()_+=\/\\?}\]{\[>]*)$/,
+          msg: 'oops! that doesn\'t look like a real name'
+        }
+      }
     },
     email: {
       type: DataTypes.STRING,
@@ -27,7 +33,6 @@ module.exports = (sequelize, DataTypes) => {
     phone: {
       type: DataTypes.STRING,
       unique: true,
-      allowNull: false
     },
     image: {
       type: DataTypes.STRING,
