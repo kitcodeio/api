@@ -13,12 +13,25 @@ module.exports = (sequelize, DataTypes) => {
       unique: true,
       allowNull: false
     },
-    name: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     email: {
       type: DataTypes.STRING,
+      allowNull: false,
       validate: {
         isEmail: true
       }
+    },
+    phone: {
+      type: DataTypes.STRING,
+      unique: true,
+      allowNull: false
+    },
+    image: {
+      type: DataTypes.STRING,
+      dafaultValue: 'http://cdn.kitcode.io/default_pro_pic.png'
     },
     role_type: {
       type: DataTypes.STRING,
@@ -32,6 +45,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
+    github: DataTypes.STRING,
+    twitter: DataTypes.STRING,
+    angel: DataTypes.STRING,
+    linkedin: DataTypes.STRING,
     verified: {
       type: DataTypes.BOOLEAN,
       allowNull: false,

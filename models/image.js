@@ -8,7 +8,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     label: {
       type: DataTypes.STRING,
-      defaultValue: 'Untitled'
+      defaultValue: 'Untitled',
+      allowNull: false
     }
   }, {});
   Image.associate = function(models) {

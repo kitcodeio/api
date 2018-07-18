@@ -20,9 +20,30 @@ module.exports = {
           isEmail: true
         }
       },
+      phone: {
+        type: Sequelize.STRING,
+        unique: true,
+        allowNull: false
+      },
+      image: {
+        type: Sequelize.STRING,
+        defaultValue: 'http://cdn.kitcode.io/default_pro_pic.png'
+      },
       role_type: {
         type: Sequelize.STRING,
         allowNull: false
+      },
+      github: {
+        type: Sequelize.STRING,
+      },
+      twitter: {
+        type: Sequelize.STRING,
+      },
+      angel: {
+        type: Sequelize.STRING,
+      },
+      linkedin: {
+        type: Sequelize.STRING
       },
       password_hash: {
         type: Sequelize.STRING,
