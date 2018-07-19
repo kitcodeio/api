@@ -32,7 +32,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     phone: {
       type: DataTypes.STRING,
-      unique: true,
     },
     image: {
       type: DataTypes.STRING,
