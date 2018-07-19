@@ -68,6 +68,7 @@ module.exports = (sequelize, DataTypes) => {
           id: this.id,
           name: this.name,
           email: this.email,
+	  image: this.image,
           role_type: this.role_type,
           exp: parseInt(expiry.getTime() / 1000)
         }, config[env].jwtsecret);
