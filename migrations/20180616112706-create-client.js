@@ -28,6 +28,7 @@ module.exports = {
       },
       phone: {
         type: Sequelize.STRING,
+	unique: true
       },
       image: {
         type: Sequelize.STRING,
