@@ -33,6 +33,7 @@ module.exports = {
       },
       image: {
         type: Sequelize.STRING,
+	allowNull: false,
         defaultValue: 'http://cdn.kitcode.io/default_pro_pic.png'
       },
       role_type: {

@@ -1,8 +1,14 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var CourseChapter = sequelize.define('CourseChapter', {
-    label: DataTypes.STRING,
-    url: DataTypes.STRING
+    label: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    url: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   }, {
     timestamps: false
   });
