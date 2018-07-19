@@ -36,7 +36,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     image: {
       type: DataTypes.STRING,
-      allowNull: false,
       dafaultValue: 'http://cdn.kitcode.io/default_pro_pic.png'
     },
     role_type: {
