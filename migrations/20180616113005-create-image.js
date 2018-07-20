@@ -9,12 +9,15 @@ module.exports = {
       },
       label: {
         type: Sequelize.STRING,
-	defaultValue: 'Untitled',
-	allowNull: false
+        defaultValue: 'Untitled',
+        allowNull: false
+      },
+      description: {
+        type: Sequelize.STRING
       },
       client_id: {
         type: Sequelize.STRING,
-	allowNull: false,
+        allowNull: false,
         references: {
           model: 'Clients',
           key: 'id'

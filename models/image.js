@@ -10,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       defaultValue: 'Untitled',
       allowNull: false
-    }
+    },
+    description: DataTypes.STRING
   }, {});
   Image.associate = function(models) {
     Image.belongsTo(models.Client, {
