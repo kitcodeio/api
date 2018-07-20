@@ -17,9 +17,6 @@ module.exports = (sequelize, DataTypes) => {
     Image.belongsTo(models.Client, {
       foreignKey: 'client_id'
     });
-    Image.hasMany(models.Container, {
-      foreignKey: 'image_id'
-    });
     Image.hasMany(models.Course, {
       foreignKey: 'image_id'
     });
