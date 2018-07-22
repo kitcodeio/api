@@ -21,24 +21,10 @@ else
 	### disable website
 	rm $sitesEnable$domain
 	### restart Nginx
-	service nginx restart
+	service nginx reload
 	### Delete virtual host rules files
 	rm $sitesAvailable$domain
 fi
-### check if directory exists or not
-if [ -d $domainDir$rootDir ]; then
-	echo -e $"Delete host root directory ? (s/n)"
-	read deldir
-	if [ "$deldir" == 's' -o "$deldir" == 'S' ]; then
-	### Delete the directory
-		rm -rf $domainDir$rootDir
-		echo -e $"Directory deleted"
-	else
-		echo -e $"Host directory conserved"
-	fi
-else
-	echo -e $"Host directory not found. Ignored"
-fi
-	### show the finished message
+
 echo -e $"Complete!\nYou just removed Virtual Host $domain"
 exit 0;
