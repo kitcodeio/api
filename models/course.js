@@ -13,9 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     }
-  }, {
-    timestamps: false
-  });
+  }, {});
   Course.associate = function(models) {
     Course.hasMany(models.CourseSection, {
       foreignKey: 'course_id'
