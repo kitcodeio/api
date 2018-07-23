@@ -31,6 +31,10 @@ module.exports = {
           model: 'Images',
           key: 'id'
         }
+      },
+      created_by: {
+        type: Sequelize.STRING,
+	allowNull: false
       }
     });
   },
