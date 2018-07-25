@@ -8,6 +8,10 @@ module.exports = (sequelize, DataTypes) => {
     logo: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    visibility: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true 
     }
   }, {
     timestamps: false

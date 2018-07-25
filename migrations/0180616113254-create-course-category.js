@@ -15,6 +15,10 @@ module.exports = {
       logo: {
         type: Sequelize.STRING,
 	allowNull: false
+      },
+      visibility: {
+        type: Sequelize.BOOLEAN,
+	defaultValue: true 
       }
     });
   },
