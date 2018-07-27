@@ -14,7 +14,7 @@ const app = express();
 const env = process.env.NODE_ENV || 'development';
 const server = require('http').createServer(app);
 
-const unless = [/\/read\/course\/.*/, '/login', '/register'];
+const unless = [/\/read\/course\/.*/, '/login', '/register', /\/search\/.*/];
 
 app.use(cors());
 app.use(express.static('public'));
