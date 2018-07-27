@@ -18,6 +18,10 @@ module.exports = (sequelize, DataTypes) => {
     Course.hasMany(models.CourseSection, {
       foreignKey: 'course_id'
     });
+   
+    Course.hasMany(models.UserCourse, {
+      foreignKey: 'course_id'
+    });
 
     Course.hasMany(models.Container, {
       foreignKey: 'course_id'

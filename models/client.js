@@ -82,6 +82,9 @@ module.exports = (sequelize, DataTypes) => {
     Client.hasMany(models.Container, {
       foreignKey: 'client_id'
     });
+    Client.hasMany(models.UserCourse, {
+      foreignKey: 'client_id'
+    });
   };
   return Client;
 };
