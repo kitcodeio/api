@@ -59,6 +59,11 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       defaultValue: false
     },
+    credit: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 5
+    }
   }, {
     getterMethods: {
       token() {

@@ -28,11 +28,11 @@ module.exports = {
       },
       phone: {
         type: Sequelize.STRING,
-	unique: true
+        unique: true
       },
       image: {
         type: Sequelize.STRING,
-	allowNull: false,
+        allowNull: false,
         defaultValue: 'http://cdn.kitcode.io/default_pro_pic.png'
       },
       role_type: {
@@ -63,6 +63,11 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         allowNull: false,
         defaultValue: false
+      },
+      credit: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        defaultValue: 5
       },
       createdAt: {
         allowNull: false,
