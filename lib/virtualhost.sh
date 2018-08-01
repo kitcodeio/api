@@ -21,12 +21,17 @@ if [ -e $sitesAvailable$domain ]; then
 fi
 
 if ! echo "server { 
-	listen 80; 
+  listen 443; 
  
-  listen [::]:80; 
+  listen [::]:443; 
  
   server_name ${domain}-kide.kitcode.io; 
  
+  ssl on;
+  ssl_certificate /etc/letsencrypt/live/kitcode.io-0001/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/kitcode.io-0001/privkey.pem;
+
+
   location / { 
 
                 proxy_pass http://$ip:54123; 
@@ -52,12 +57,16 @@ if ! echo "server {
 
 server { 
  
-  listen 80; 
+  listen 443; 
  
-  listen [::]:80; 
+  listen [::]:443; 
  
   server_name ${domain}-terminal.kitcode.io; 
- 
+
+  ssl on;
+  ssl_certificate /etc/letsencrypt/live/kitcode.io-0001/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/kitcode.io-0001/privkey.pem;
+
   location / { 
 
                 proxy_pass http://$ip:54124;
@@ -83,12 +92,16 @@ server {
 
 server { 
  
-  listen 80; 
+  listen 443; 
  
-  listen [::]:80; 
+  listen [::]:443; 
  
   server_name ${domain}-app.kitcode.io; 
  
+  ssl on;
+  ssl_certificate /etc/letsencrypt/live/kitcode.io-0001/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/kitcode.io-0001/privkey.pem;
+
   location / { 
 
                 proxy_pass http://$ip:80; 
