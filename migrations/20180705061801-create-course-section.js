@@ -18,7 +18,8 @@ module.exports = {
 	references: {
 	  model: 'Courses',
 	  key: 'id'
-	}
+	},
+        onDelete: 'cascade'
       },
       description: {
         type: Sequelize.STRING,

@@ -20,7 +20,8 @@ module.exports = {
 	references: {
 	  model: 'Courses',
 	  key: 'id'
-	}
+	},
+	onDelete: 'cascade'
       },
       createdAt: {
         allowNull: false,
