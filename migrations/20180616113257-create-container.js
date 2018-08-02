@@ -12,7 +12,8 @@ module.exports = {
         references: {
           model: 'Courses',
           key: 'id'
-        }
+        },
+	onDelete: 'set null'
       },
       client_id: {
         type: Sequelize.STRING,
