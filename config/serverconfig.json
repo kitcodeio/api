@@ -1,10 +1,10 @@
 {
-  "local": {
+  "beta": {
     "port": "9090",
     "host": "localhost",
     "jwtsecret": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649"
   },
-  "development": {
+  "staging": {
     "port": "9090",
     "host": "localhost",
     "jwtsecret": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649"

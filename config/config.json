@@ -1,18 +1,18 @@
 {
-  "local": {
-    "username": "root",
-    "password": "root",
-    "database": "kitcode",
-    "host": "localhost",
-    "dialect": "mysql",
-    "operatorsAliases" : false,
-    "logging": false
-  },
-  "development": {
+  "beta": {
     "username": "root",
     "password": "rootrootroot",
     "database": "kitcode",
     "host": "kitcode.c6hm4xn8ssjx.ap-south-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "operatorsAliases" : false,
+    "logging": false
+  },
+  "staging": {
+    "username": "root",
+    "password": "rootrootroot",
+    "database": "kitcode",
+    "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
     "port": "3306",
     "dialect": "mysql",
     "operatorsAliases" : false,
