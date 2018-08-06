@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true
     },
     container_id: DataTypes.STRING,
+    image_id: DataTypes.STRING,
     ip: DataTypes.STRING,
     state: {
       type: DataTypes.STRING,

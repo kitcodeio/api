@@ -13,7 +13,7 @@ module.exports = {
           model: 'Courses',
           key: 'id'
         },
-	onDelete: 'set null'
+        onDelete: 'set null'
       },
       client_id: {
         type: Sequelize.STRING,
@@ -28,6 +28,9 @@ module.exports = {
           model: 'Subdomains',
           key: 'salt'
         }
+      },
+      image_id: {
+        type: Sequelize.STRING
       },
       container_id: {
         type: Sequelize.STRING
