@@ -11,7 +11,7 @@ const errorHandler = require('./lib/errorHandler');
 const sockets = require('./lib/socket.js');
 
 const app = express();
-const env = process.env.NODE_ENV || 'development';
+const env = process.env.NODE_ENV || 'staging';
 const server = require('http').createServer(app);
 
 const unless = [/\/read\/course\/.*/, '/login', '/register', /\/search\/.*/];
