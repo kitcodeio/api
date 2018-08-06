@@ -3,7 +3,7 @@
     "username": "root",
     "password": "rootrootroot",
     "database": "kitcode",
-    "host": "kitcode.c6hm4xn8ssjx.ap-south-1.rds.amazonaws.com",
+    "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases" : false,
     "logging": false
@@ -12,7 +12,7 @@
     "username": "root",
     "password": "rootrootroot",
     "database": "kitcode",
-    "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
+    "host": "kitcode.c6hm4xn8ssjx.ap-south-1.rds.amazonaws.com",
     "port": "3306",
     "dialect": "mysql",
     "operatorsAliases" : false,
