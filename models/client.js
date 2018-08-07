@@ -1,9 +1,5 @@
 'use strict';
 
-const env = process.env.NODE_ENV || 'staging';
-const jwt = require('jsonwebtoken');
-const config = require('../config/serverconfig.json');
-
 module.exports = (sequelize, DataTypes) => {
   var Client = sequelize.define('Client', {
     id: {
@@ -64,22 +60,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       defaultValue: 5
     }
-  }, {
-    getterMethods: {
-      token() {
-        let expiry = new Date();
-        expiry.setDate(expiry.getDate() + 7);
-        return jwt.sign({
-          id: this.id,
-          name: this.name,
-          email: this.email,
-	  image: this.image,
-          role_type: this.role_type,
-          exp: parseInt(expiry.getTime() / 1000)
-        }, config[env].jwtsecret);
-      }
-    }
-  });
+  }, {});
   Client.associate = function(models) {
     Client.hasMany(models.Image, {
       foreignKey: 'client_id'
