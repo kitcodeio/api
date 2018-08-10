@@ -1,6 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var CourseChapter = sequelize.define('CourseChapter', {
+    index: DataTypes.INTEGER,
     label: {
       type: DataTypes.STRING,
       allowNull: false

@@ -1,6 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var CourseCategory = sequelize.define('CourseCategory', {
+    index: DataTypes.INTEGER,
     label: {
       type: DataTypes.STRING,
       allowNull: false
@@ -11,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     visibility: {
       type: DataTypes.BOOLEAN,
-      defaultValue: true 
+      defaultValue: true
     }
   }, {
     timestamps: false
