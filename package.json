@@ -1,5 +1,5 @@
 {
-  "name": "kitcode-server",
+  "name": "kitcode-api",
   "version": "1.0.0",
   "description": "kitcode-sdk",
   "main": "index.js",
@@ -8,14 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/kitcodestarlly/kitcode-server.git"
+    "url": "git+ssh://git@gitlab.com/kitcode/kitcode-server.git"
   },
   "author": "Kitcode Pvt. Ltd.",
   "license": "ISC",
   "homepage": "https://bitbucket.org/kitcodestarlly/kitcode-server#readme",
   "dependencies": {
     "aws-sdk": "^2.266.1",
-    "body-parser": "^1.18.3",
     "dockerode": "^2.5.5",
     "hapi-auth-jwt2": "^7.4.1",
     "inert": "^4.2.1",
@@ -25,5 +24,12 @@
     "sequelize": "^4.37.10",
     "shelljs": "^0.8.2",
     "socket.io": "^2.1.1"
-  }
+  },
+  "bugs": {
+    "url": "https://gitlab.com/kitcode/kitcode-server/issues"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {}
 }
