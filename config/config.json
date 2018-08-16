@@ -1,28 +1,55 @@
 {
   "beta": {
-    "username": "root",
-    "password": "rootrootroot",
-    "database": "kitcode",
-    "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
-    "dialect": "mysql",
-    "operatorsAliases" : false,
-    "logging": false
+    "db":{
+      "username": "root",
+      "password": "rootrootroot",
+      "database": "kitcode",
+      "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
+      "dialect": "mysql",
+      "operatorsAliases" : false,
+      "logging": false
+    },
+    "server": {
+      "api": {
+        "port": "9090",
+        "host": "localhost"
+      }
+    },
+    "jwtsecret": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649"
   },
   "staging": {
-    "username": "root",
-    "password": "rootrootroot",
-    "database": "kitcode",
-    "host": "kitcode.c6hm4xn8ssjx.ap-south-1.rds.amazonaws.com",
-    "port": "3306",
-    "dialect": "mysql",
-    "operatorsAliases" : false,
-    "logging": false
+    "db":{
+      "username": "root",
+      "password": "rootrootroot",
+      "database": "kitcode",
+      "host": "kitcode.c6hm4xn8ssjx.ap-south-1.rds.amazonaws.com",
+      "port": "3306",
+      "dialect": "mysql",
+      "operatorsAliases" : false,
+      "logging": false
+    },
+    "server": {
+      "api": {
+        "port": "9090",
+        "host": "localhost"
+      }
+    },
+    "jwtsecret": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649"
   },
   "production": {
-    "username": "root",
-    "password": "rootrootroot",
-    "database": "kitcode",
-    "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
-    "dialect": "mysql"
+    "db":{
+      "username": "root",
+      "password": "rootrootroot",
+      "database": "kitcode",
+      "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
+      "dialect": "mysql"
+    },
+    "server": {
+      "api": {
+        "port": "9090",
+        "host": "localhost"
+      }
+    },
+    "jwtsecret": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649"
   }
 }

@@ -1,13 +1,14 @@
 const Inert = require('inert');
 const JWT = require('hapi-auth-jwt2');
-
 const Routes = require('./lib/routes');
 const Validate = require('./lib/validate');
 const Sockets = require('./lib/socket');
+var config = require("./config/config.json");
 
 exports.register = async function(plugin, options, next) {
-  const config = options.config;
+  config = options.config || config;
   const io = require('socket.io')(plugin.listener);
+
   plugin.register([Inert, JWT], function(err) {
     if (err) throw err;
     plugin.auth.strategy('jwt', 'jwt', {
