@@ -30,7 +30,7 @@
     },
     "server": {
       "api": {
-        "port": "9090",
+        "port": "7070",
         "host": "localhost"
       }
     },
@@ -46,7 +46,7 @@
     },
     "server": {
       "api": {
-        "port": "9090",
+        "port": "8080",
         "host": "localhost"
       }
     },

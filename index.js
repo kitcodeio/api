@@ -5,13 +5,9 @@ const Validate = require('./lib/validate');
 const Sockets = require('./lib/socket');
 const env = process.env.NODE_ENV || 'staging';
 
-var apiConfig = require("./config/config.json")[env];
-
-exports.register = async function(plugin, options, next) {
-  config = options.config || apiConfig;
-  config.db = apiConfig.db;
+exports.register = function(plugin, options, next) {
+  config = options.config;
   const io = require('socket.io')(plugin.listener);
-
   plugin.register([Inert, JWT], function(err) {
     if (err) throw err;
     plugin.auth.strategy('jwt', 'jwt', {
@@ -29,4 +25,4 @@ exports.register = async function(plugin, options, next) {
 
 exports.register.attributes = {
   pkg: require('./package.json')
-};
+}
