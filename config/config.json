@@ -1,12 +1,12 @@
 {
   "beta": {
-    "db":{
+    "db": {
       "username": "root",
       "password": "rootrootroot",
       "database": "kitcode",
       "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
       "dialect": "mysql",
-      "operatorsAliases" : false,
+      "operatorsAliases": false,
       "logging": false
     },
     "server": {
@@ -15,17 +15,26 @@
         "host": "localhost"
       }
     },
-    "jwtsecret": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649"
+    "auth": {
+      "facebook": {
+        "id": "248217116002964",
+        "secret": "3a4d4d0b6cc55b64dbed9cbcdfd1cdea"
+      }
+    },
+    "secret": {
+      "jwt": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649",
+      "cookie": "bhVFT^R*7iyhuHVTFU^R*t798yhuGY&T*^r57DFHTGJYi7t^R&%ER^&T98OYILHGUFYCDtu6R*&TI*YOT&IYFut6rI&*UY"
+    }
   },
   "staging": {
-    "db":{
+    "db": {
       "username": "root",
       "password": "rootrootroot",
       "database": "kitcode",
       "host": "kitcode.c6hm4xn8ssjx.ap-south-1.rds.amazonaws.com",
       "port": "3306",
       "dialect": "mysql",
-      "operatorsAliases" : false,
+      "operatorsAliases": false,
       "logging": false
     },
     "server": {
@@ -34,10 +43,19 @@
         "host": "localhost"
       }
     },
-    "jwtsecret": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649"
+    "auth": {
+      "facebook": {
+        "id": "248217116002964",
+        "secret": "3a4d4d0b6cc55b64dbed9cbcdfd1cdea"
+      }
+    },
+    "secret": {
+      "jwt": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649",
+      "cookie": "bhVFT^R*7iyhuHVTFU^R*t798yhuGY&T*^r57DFHTGJYi7t^R&%ER^&T98OYILHGUFYCDtu6R*&TI*YOT&IYFut6rI&*UY"
+    }
   },
   "production": {
-    "db":{
+    "db": {
       "username": "root",
       "password": "rootrootroot",
       "database": "kitcode",
@@ -50,6 +68,15 @@
         "host": "localhost"
       }
     },
-    "jwtsecret": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649"
+    "auth": {
+      "facebook": {
+        "id": "248217116002964",
+        "secret": "3a4d4d0b6cc55b64dbed9cbcdfd1cdea"
+      }
+    },
+    "secret": {
+      "jwt": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649",
+      "cookie": "bhVFT^R*7iyhuHVTFU^R*t798yhuGY&T*^r57DFHTGJYi7t^R&%ER^&T98OYILHGUFYCDtu6R*&TI*YOT&IYFut6rI&*UY"
+    }
   }
 }
