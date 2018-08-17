@@ -1,5 +1,6 @@
 {
   "beta": {
+    "tag": "beta",
     "db": {
       "username": "root",
       "password": "rootrootroot",
@@ -31,6 +32,7 @@
     }
   },
   "staging": {
+    "tag": "staging",
     "db": {
       "username": "root",
       "password": "rootrootroot",
@@ -64,6 +66,7 @@
     }
   },
   "production": {
+    "tag": "production",
     "db": {
       "username": "root",
       "password": "rootrootroot",
