@@ -19,6 +19,10 @@
       "facebook": {
         "id": "248217116002964",
         "secret": "3a4d4d0b6cc55b64dbed9cbcdfd1cdea"
+      },
+      "google": {
+        "id": "35446698823-r8cah6sm4mjd9hjua0mkttstgtpf88tf.apps.googleusercontent.com",
+        "secret": "o66T879W3sV8eHMu15STmVBX"
       }
     },
     "secret": {
@@ -47,7 +51,12 @@
       "facebook": {
         "id": "248217116002964",
         "secret": "3a4d4d0b6cc55b64dbed9cbcdfd1cdea"
+      },
+      "google": {
+        "id": "35446698823-r8cah6sm4mjd9hjua0mkttstgtpf88tf.apps.googleusercontent.com",
+        "secret": "o66T879W3sV8eHMu15STmVBX"
       }
+
     },
     "secret": {
       "jwt": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649",
@@ -72,7 +81,12 @@
       "facebook": {
         "id": "248217116002964",
         "secret": "3a4d4d0b6cc55b64dbed9cbcdfd1cdea"
+      },
+      "google": {
+        "id": "35446698823-r8cah6sm4mjd9hjua0mkttstgtpf88tf.apps.googleusercontent.com",
+        "secret": "o66T879W3sV8eHMu15STmVBX"
       }
+
     },
     "secret": {
       "jwt": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649",
