@@ -13,6 +13,20 @@ module.exports = (sequelize, DataTypes) => {
     created_by: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    price: {
+      type: DataTypes.INTEGER,
+      defaultValue: 4999,
+      allowNull: false
+    },
+    discount: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      allowNull: false,
+      validate: {
+        min: 0,
+        max: 100
+      }
     }
   }, {});
   Course.associate = function(models) {

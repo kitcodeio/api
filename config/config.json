@@ -1,4 +1,14 @@
-{
+{ "staging":{
+      "username": "root",
+      "password": "rootrootroot",
+      "database": "kitcode",
+      "host": "kitcode.c6hm4xn8ssjx.ap-south-1.rds.amazonaws.com",
+      "port": "3306",
+      "dialect": "mysql",
+      "operatorsAliases": false,
+      "logging": false
+
+},
   "beta": {
     "tag": "beta",
     "db": {
@@ -31,7 +41,7 @@
       "cookie": "bhVFT^R*7iyhuHVTFU^R*t798yhuGY&T*^r57DFHTGJYi7t^R&%ER^&T98OYILHGUFYCDtu6R*&TI*YOT&IYFut6rI&*UY"
     }
   },
-  "staging": {
+  "stagingl": {
     "tag": "staging",
     "db": {
       "username": "root",
