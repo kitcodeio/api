@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "gulp serve",
-    "update:version": "gulp update:version"
+    "update:version": "gulp update:version",
+    "set:env:staging": "export NODE_ENV=staging",
+    "set:env:beta": "export NODE_ENV=beta",
+    "set:env:prod": "export NODE_ENV=production"
   },
   "repository": {
     "type": "git",

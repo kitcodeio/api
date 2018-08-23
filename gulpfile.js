@@ -58,6 +58,3 @@ gulp.task('update:version', function() {
     console.log(help.join('\n'));
   }
 });
-
-gulp.task('set:enviroment', function() {
-})
