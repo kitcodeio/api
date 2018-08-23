@@ -21,3 +21,13 @@ gulp.task('serve', function() {
         console.log('kitcode api server is online at http://' + config.server.api.host + ':' + config.server.api.port);
     });
 });
+
+gulp.task('update-version', function () {
+
+
+});
+
+gulp.task('set-enviroment', function () {
+
+
+})
