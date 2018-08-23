@@ -1,4 +1,4 @@
-# KITCODE IO PVT. LTD.
+![](https://beta.kitcode.io/assets/images/kitcode%20logo.png)
 ## kitcide.io-api
 ###  Steps to run this project in your local:
 ```
