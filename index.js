@@ -12,7 +12,7 @@ const env = process.env.NODE_ENV || 'staging';
 exports.register = async function(plugin, options, next) {
   const config = options.config;
   const io = require('socket.io')(plugin.listener); 
-  io.on('connection', Sockets);
+  io.on('connection', Sockets(config));
   await plugin.register([Inert, Bell, JWT]);
   strategy.register(plugin, config);
   plugin.route(Routes(config));
