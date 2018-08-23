@@ -1,11 +1,9 @@
 const Inert = require('inert');
 const JWT = require('hapi-auth-jwt2');
 const Bell = require('bell');
-
 const Routes = require('./lib/routes');
 const Sockets = require('./lib/socket');
 const strategy = require('./lib/strategy');
-
 const env = process.env.NODE_ENV || 'staging';
 
 
