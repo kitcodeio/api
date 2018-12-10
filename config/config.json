@@ -3,7 +3,7 @@
     "tag": "beta",
     "db": {
       "username": "root",
-      "password": "rootrootroot",
+      "password": "UL6WkyequehcX6rZB9zesCw8",
       "database": "kitcode",
       "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
       "dialect": "mysql",

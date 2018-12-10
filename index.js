@@ -6,7 +6,6 @@ const Sockets = require('./lib/socket');
 const strategy = require('./lib/strategy');
 const env = process.env.NODE_ENV || 'staging';
 
-
 exports.register = async function(plugin, options, next) {
   const config = options.config;
   const io = require('socket.io')(plugin.listener); 

@@ -3,7 +3,7 @@ var bump = require('gulp-bump');
 var args = require('yargs').argv;
 var Hapi = require('hapi');
 
-var env = process.env.NODE_ENV || 'staging';
+var env = process.env.NODE_ENV || 'beta';
 
 var plugin = require('./index')
 var config = require('./config/config.json')[env];
