@@ -12,7 +12,7 @@ exports.register = async function(plugin, options, next) {
   io.on('connection', Sockets(config));
   await plugin.register([Inert, Bell, JWT]);
   strategy.register(plugin, config);
-  plugin.route(Routes(config));
+  plugin.route(Routes(config, io));
   return next();
 }
 
