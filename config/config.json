@@ -16,6 +16,14 @@
         "host": "localhost"
       }
     },
+    "mail": {
+      "server": {
+        "host": "smtp.mail.us-east-1.awsapps.com",
+        "port": "993"
+      },
+      "user": "noreply@kitcode.io",
+      "password": "Noreply@2394"
+    },
     "auth": {
       "facebook": {
         "id": "248217116002964",
@@ -79,6 +87,14 @@
         "port": "8080",
         "host": "localhost"
       }
+    },
+    "mail": {
+      "server": {
+        "host": "smtp.mail.us-east-1.awsapps.com",
+        "port": "993"
+      },
+      "user": "noreply@kitcode.io",
+      "password": "Noreply@2394"
     },
     "auth": {
       "facebook": {

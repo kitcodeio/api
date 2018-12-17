@@ -48,8 +48,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     github: DataTypes.STRING,
     twitter: DataTypes.STRING,
-    angel: DataTypes.STRING,
-    linkedin: DataTypes.STRING,
+    facebook: DataTypes.STRING,
+    google: DataTypes.STRING,
     verified: {
       type: DataTypes.BOOLEAN,
       allowNull: false,

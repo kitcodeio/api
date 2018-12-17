@@ -45,10 +45,10 @@ module.exports = {
       twitter: {
         type: Sequelize.STRING,
       },
-      angel: {
+      google: {
         type: Sequelize.STRING,
       },
-      linkedin: {
+      facebook: {
         type: Sequelize.STRING
       },
       password_hash: {
