@@ -61,41 +61,6 @@ server {
  
   listen [::]:443; 
  
-  server_name ${domain}-terminal.kitcode.io; 
-
-  ssl on;
-  ssl_certificate /etc/letsencrypt/live/kitcode.io-0001/fullchain.pem;
-  ssl_certificate_key /etc/letsencrypt/live/kitcode.io-0001/privkey.pem;
-
-  location / { 
-
-                proxy_pass http://$ip:54124;
-                
-		proxy_http_version 1.1; 
- 
-                proxy_set_header Upgrade \$http_upgrade; 
- 
-                proxy_set_header Connection 'upgrade'; 
- 
-                proxy_set_header Host \$host; 
- 
-                proxy_set_header X-Real-IP \$remote_addr; 
- 
-                proxy_set_header X-Fowarded-For \$proxy_add_x_forwarded_for; 
- 
-                proxy_set_header X-Fowarded-Proto \$scheme; 
- 
-                proxy_cache_bypass \$http_upgrade; 
-  } 
- 
-}
-
-server { 
- 
-  listen 443; 
- 
-  listen [::]:443; 
- 
   server_name ${domain}-app.kitcode.io; 
  
   ssl on;
