@@ -13,8 +13,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       defaultValue: 'idle'
     },
-    ip_location: DataTypes.STRING,
-    geo_location: DataTypes.STRING
   }, {});
   Container.associate = function(models) {
 
