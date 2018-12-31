@@ -18,6 +18,10 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Container.associate = function(models) {
 
+    Container.belongsTo(models.Image, {
+      foreignKey: 'base_image'
+    });
+
     Container.belongsTo(models.Client, {
       foreignKey: 'client_id'
     });
