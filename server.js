@@ -1,11 +1,11 @@
-var Hapi = require('hapi');
+const Hapi = require('hapi');
 
-var env = process.env.NODE_ENV || 'beta';
+const env = process.env.NODE_ENV || 'beta';
 
-var plugin = require('./index')
-var config = require('./config/config.json')[env];
+const plugin = require('./index')
+const config = require('./config/config.json')[env];
 
-var server = new Hapi.Server();
+const server = new Hapi.Server();
 server.connection({
   host: config.server.api.host,
   port: config.server.api.port,
