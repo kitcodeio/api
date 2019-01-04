@@ -29,6 +29,7 @@
     "mysql2": "^1.6.1",
     "nodemailer": "^4.7.0",
     "request": "^2.88.0",
+    "request-promise-native": "^1.0.5",
     "sequelize": "^4.38.0",
     "shelljs": "^0.8.2",
     "socket.io": "^2.1.1"
