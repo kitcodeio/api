@@ -4,22 +4,26 @@ module.exports = (sequelize, DataTypes) => {
     index: DataTypes.INTEGER,
     label: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     logo: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     visibility: {
       type: DataTypes.BOOLEAN,
-      defaultValue: true
-    }
+      defaultValue: true,
+    },
   }, {
-    timestamps: false
+    timestamps: false,
   });
   CourseCategory.associate = function(models) {
     CourseCategory.hasMany(models.Course, {
-      foreignKey: 'category_id'
+      foreignKey: 'category_id',
+    });
+    CourseCategory.hasMany(models.CategoryVersion, {
+      foreignKey: 'category_id',
+      as: 'versions',
     });
   };
   return CourseCategory;

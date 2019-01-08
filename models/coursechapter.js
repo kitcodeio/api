@@ -4,18 +4,18 @@ module.exports = (sequelize, DataTypes) => {
     index: DataTypes.INTEGER,
     label: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     url: {
       type: DataTypes.STRING,
-      allowNull: false
-    }
+      allowNull: false,
+    },
   }, {
-    timestamps: false
+    timestamps: false,
   });
   CourseChapter.associate = function(models) {
     CourseChapter.belongsTo(models.CourseSection, {
-      foreignKey: 'section_id'
+      foreignKey: 'section_id',
     });
   };
   return CourseChapter;

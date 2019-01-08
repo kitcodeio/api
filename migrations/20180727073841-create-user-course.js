@@ -6,34 +6,34 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       client_id: {
         type: Sequelize.STRING,
-	references: {
+        references: {
 	  model: 'Clients',
-	  key: 'id'
-	}
+	  key: 'id',
+        },
       },
       course_id: {
         type: Sequelize.INTEGER,
-	references: {
+        references: {
 	  model: 'Courses',
-	  key: 'id'
-	},
-	onDelete: 'cascade'
+	  key: 'id',
+        },
+        onDelete: 'cascade',
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('UserCourses');
-  }
+  },
 };

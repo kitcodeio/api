@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "gulp serve",
+    "lint": "eslint",
+    "sequelize": "sequelize",
     "update:version": "gulp update:version",
     "set:env:staging": "export NODE_ENV=staging",
     "set:env:beta": "export NODE_ENV=beta",
@@ -40,6 +42,8 @@
     "lib": "lib"
   },
   "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-google": "^0.11.0",
     "gulp": "^3.9.1",
     "gulp-bump": "^3.1.1",
     "sequelize-cli": "^5.4.0",

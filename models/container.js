@@ -4,32 +4,32 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV1,
-      primaryKey: true
+      primaryKey: true,
     },
     container_id: DataTypes.STRING,
     image_id: DataTypes.STRING,
     ip: DataTypes.STRING,
     state: {
       type: DataTypes.STRING,
-      defaultValue: 'idle'
+      defaultValue: 'idle',
     },
   }, {});
   Container.associate = function(models) {
 
     Container.belongsTo(models.Image, {
-      foreignKey: 'base_image'
+      foreignKey: 'base_image',
     });
 
     Container.belongsTo(models.Client, {
-      foreignKey: 'client_id'
+      foreignKey: 'client_id',
     });
 
     Container.belongsTo(models.Course, {
-      foreignKey: 'course_id'
+      foreignKey: 'course_id',
     });
 
     Container.belongsTo(models.Subdomain, {
-      foreignKey: 'subdomain'
+      foreignKey: 'subdomain',
     });
 
   };

@@ -5,54 +5,54 @@ module.exports = {
       id: {
         allowNull: false,
         primaryKey: true,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       course_id: {
         type: Sequelize.INTEGER,
         references: {
           model: 'Courses',
-          key: 'id'
+          key: 'id',
         },
-        onDelete: 'set null'
+        onDelete: 'set null',
       },
       client_id: {
         type: Sequelize.STRING,
         references: {
           model: 'Clients',
-          key: 'id'
-        }
+          key: 'id',
+        },
       },
       subdomain: {
         type: Sequelize.STRING,
         references: {
           model: 'Subdomains',
-          key: 'salt'
-        }
+          key: 'salt',
+        },
       },
       image_id: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       container_id: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       ip: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       state: {
         type: Sequelize.STRING,
-        defaultValue: 'idle'
+        defaultValue: 'idle',
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('Containers');
-  }
+  },
 };

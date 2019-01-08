@@ -1,28 +1,30 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('CourseCategories', {
+    return queryInterface.createTable('CategoryVersions', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      label: {
-        type: Sequelize.STRING,
-        allowNull: false,
+      category_id: {
+        type: Sequelize.INTEGER,
+        references: {
+	  model: 'CourseCategories',
+	  key: 'id',
+        },
+        onDelete: 'cascade',
       },
-      logo: {
+      version: {
         type: Sequelize.STRING,
-        allowNull: false,
       },
-      visibility: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: true, 
+      command: {
+        type: Sequelize.STRING,
       },
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('CourseCategories');
+    return queryInterface.dropTable('CategoryVersions');
   },
 };

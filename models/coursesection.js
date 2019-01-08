@@ -4,22 +4,22 @@ module.exports = (sequelize, DataTypes) => {
     index: DataTypes.INTEGER,
     label: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
-      allowNull: false
-    }
+      allowNull: false,
+    },
   }, {
-    timestamps: false
+    timestamps: false,
   });
   CourseSection.associate = function(models) {
     CourseSection.hasMany(models.CourseChapter, {
-      foreignKey: 'section_id'
+      foreignKey: 'section_id',
     });
 
     CourseSection.belongsTo(models.Course, {
-      foreignKey: 'course_id'
+      foreignKey: 'course_id',
     });
   };
   return CourseSection;

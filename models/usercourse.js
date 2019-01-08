@@ -4,10 +4,10 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   UserCourse.associate = function(models) {
     UserCourse.belongsTo(models.Client, {
-      foreign_key: 'client_id'
+      foreign_key: 'client_id',
     });
     UserCourse.belongsTo(models.Course, {
-      foreign_key: 'course_id'
+      foreign_key: 'course_id',
     });
   };
   return UserCourse;

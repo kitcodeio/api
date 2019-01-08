@@ -6,7 +6,7 @@ module.exports = {
       queryInterface.addColumn('Courses', 'price', {
         type: Sequelize.INTEGER,
         defaultValue: 4999,
-        allowNull: false
+        allowNull: false,
       }),
       queryInterface.addColumn('Courses', 'discount', {
         type: Sequelize.INTEGER,
@@ -14,8 +14,8 @@ module.exports = {
         defaultValue: 0,	
         validate: {
           min: 0,
-          max: 100
-        }
+          max: 100,
+        },
       }),
     ];
   },
@@ -25,5 +25,5 @@ module.exports = {
       queryInterface.removeColumn('Courses', 'discount'),
 
     ];
-  }
+  },
 };

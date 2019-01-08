@@ -6,28 +6,28 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       label: {
         type: Sequelize.STRING,
-	allowNull: false
+        allowNull: false,
       },
       section_id: {
         type: Sequelize.INTEGER,
-	allowNull: false,
-	references: {
+        allowNull: false,
+        references: {
 	  model: 'CourseSections',
-	  key: 'id'
-	},
-        onDelete: 'cascade'
+	  key: 'id',
+        },
+        onDelete: 'cascade',
       },
       url: {
         type: Sequelize.STRING,
-	allowNull: false
-      }
+        allowNull: false,
+      },
     });
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('CourseChapters');
-  }
+  },
 };

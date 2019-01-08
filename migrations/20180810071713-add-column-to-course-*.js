@@ -6,7 +6,7 @@ module.exports = {
       queryInterface.addColumn('CourseCategories', 'index', Sequelize.INTEGER),
       queryInterface.addColumn('Courses', 'index', Sequelize.INTEGER),
       queryInterface.addColumn('CourseSections', 'index', Sequelize.INTEGER),
-      queryInterface.addColumn('CourseChapters', 'index', Sequelize.INTEGER)
+      queryInterface.addColumn('CourseChapters', 'index', Sequelize.INTEGER),
     ];
   },
   down: (queryInterface, Sequelize) => {
@@ -14,7 +14,7 @@ module.exports = {
       queryInterface.removeColumn('CourseCategories', 'index', Sequelize.INTEGER),
       queryInterface.removeColumn('Courses', 'index', Sequelize.INTEGER),
       queryInterface.removeColumn('CourseSections', 'index', Sequelize.INTEGER),
-      queryInterface.removeColumn('CourseChapters', 'index', Sequelize.INTEGER)
+      queryInterface.removeColumn('CourseChapters', 'index', Sequelize.INTEGER),
     ];
-  }
+  },
 };

@@ -6,14 +6,14 @@ module.exports = {
       type: Sequelize.STRING,
       references: {
         model: 'Images',
-        key: 'id'
+        key: 'id',
       },
       onDelete: 'set null',
-      after: 'id'
+      after: 'id',
     });
   },
 
   down: (queryInterface, Sequelize) => {
     queryInterface.removeColumn('Containers', 'base_image');
-  }
+  },
 };
