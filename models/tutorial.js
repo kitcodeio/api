@@ -27,6 +27,10 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: false
     }
   }, {});
-  Tutorial.associate = function(models) {};
+  Tutorial.associate = function(models) {
+    Tutorial.belongsTo(models.Client, {
+      foreignKey: 'submitted_by'
+    });
+  };
   return Tutorial;
 };

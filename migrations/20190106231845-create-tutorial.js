@@ -7,6 +7,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.STRING
       },
+      submitted_by: {
+        type: Sequelize.STRING,
+        references: {
+	  model: 'Clients',
+	  key: 'id'
+	},
+	onDelete: 'set null'
+      },
       link: {
         type: Sequelize.STRING,
         allowNull: false,
