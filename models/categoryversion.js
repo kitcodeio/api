@@ -3,6 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const CategoryVersion = sequelize.define('CategoryVersion', {
     version: DataTypes.STRING,
     command: DataTypes.STRING,
+    default: DataTypes.BOOLEAN
   }, {
     timestamps: false,
   });

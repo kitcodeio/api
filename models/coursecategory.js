@@ -25,6 +25,13 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'category_id',
       as: 'versions',
     });
+    CourseCategory.hasMany(models.TutorialTags, {
+      foreignKey: 'category_id',
+    });
+    CourseCategory.belongsTo(CourseCategory, {
+      foreignKey: 'parent_id',
+      as: 'parent'
+    });
   };
   return CourseCategory;
 };

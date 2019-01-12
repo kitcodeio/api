@@ -10,10 +10,14 @@ module.exports = {
       submitted_by: {
         type: Sequelize.STRING,
         references: {
-	  model: 'Clients',
-	  key: 'id',
+          model: 'Clients',
+          key: 'id',
         },
         onDelete: 'set null',
+      },
+      label: {
+        type: Sequelize.STRING,
+        allowNull: false
       },
       link: {
         type: Sequelize.STRING,
@@ -32,6 +36,14 @@ module.exports = {
       approved: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
+      },
+      image_id: {
+        type: Sequelize.STRING,
+        references: {
+          model: 'Images',
+          key: 'id',
+        },
+        onDelete: 'set null',
       },
       createdAt: {
         allowNull: false,

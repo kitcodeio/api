@@ -8,6 +8,10 @@ module.exports = (sequelize, DataTypes) => {
       unique: true,
       allowNull: false,
     },
+    label: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     link: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -26,10 +30,17 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
     },
+    status: DataTypes.STRING
   }, {});
   Tutorial.associate = function(models) {
     Tutorial.belongsTo(models.Client, {
       foreignKey: 'submitted_by',
+    });
+    Tutorial.belongsTo(models.Image, {
+      foreignKey: 'image_id',
+    });
+    Tutorial.hasMany(models.TutorialTags, {
+      foreignKey: 'tutorial_id'
     });
   };
   return Tutorial;

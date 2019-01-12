@@ -22,6 +22,9 @@ module.exports = {
       command: {
         type: Sequelize.STRING,
       },
+      default: {
+        type: Sequelize.BOOLEAN,
+      }
     });
   },
   down: (queryInterface, Sequelize) => {
