@@ -38,10 +38,6 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'course_id',
     });
 
-    Course.hasMany(models.Container, {
-      foreignKey: 'course_id',
-    });
-
     Course.belongsTo(models.Image, {
       foreignKey: 'image_id',
     });

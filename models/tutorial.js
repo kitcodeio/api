@@ -42,6 +42,9 @@ module.exports = (sequelize, DataTypes) => {
     Tutorial.hasMany(models.TutorialTags, {
       foreignKey: 'tutorial_id'
     });
+    Tutorial.hasMany(models.Container, {
+      foreignKey: 'tutorial_id'
+    });
   };
   return Tutorial;
 };

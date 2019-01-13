@@ -24,8 +24,8 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'client_id',
     });
 
-    Container.belongsTo(models.Course, {
-      foreignKey: 'course_id',
+    Container.belongsTo(models.Tutorial, {
+      foreignKey: 'tutorial_id',
     });
 
     Container.belongsTo(models.Subdomain, {
