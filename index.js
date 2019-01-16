@@ -3,7 +3,6 @@ const JWT = require('hapi-auth-jwt2');
 const Routes = require('./lib/routes');
 const Sockets = require('./lib/socket');
 const strategy = require('./lib/strategy');
-const env = process.env.NODE_ENV || 'beta';
 
 exports.register = async function(plugin, options, next) {
   const config = options.config;

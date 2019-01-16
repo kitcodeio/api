@@ -1,9 +1,7 @@
 const Hapi = require('hapi');
 
-const env = process.env.NODE_ENV || 'beta';
-
 const plugin = require('./index');
-const config = require('./config/config.json')[env];
+const config = require('./config/config.json');
 
 const server = new Hapi.Server();
 server.connection({

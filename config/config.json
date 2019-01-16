@@ -1,106 +1,51 @@
 {
-  "beta": {
-    "tag": "beta",
-    "db": {
-      "username": "root",
-      "password": "root",
-      "database": "kitcode",
-      "host": "localhost",
-      "dialect": "mysql",
-      "operatorsAliases": false,
-      "logging": false
+  "db": {
+    "username": "root",
+    "password": "root",
+    "database": "kitcode",
+    "host": "localhost",
+    "dialect": "mysql",
+    "operatorsAliases": false,
+    "logging": false
+  },
+  "server": {
+    "run": {
+      "port": "7070",
+      "host": "localhost"
     },
-    "server": {
-      "run": {
-        "port": "7070",
-	"host": "localhost"
-      },
-      "api": {
-        "port": "9090",
-        "host": "localhost"
-      },
-      "web": {
-        "port": "8080",
-        "host": "localhost"
-      }
+    "api": {
+      "port": "9090",
+      "host": "localhost"
     },
-    "mail": {
-      "server": {
-        "host": "smtp.mail.us-east-1.awsapps.com",
-        "port": "993"
-      },
-      "user": "noreply@kitcode.io",
-      "password": "Noreply@2394"
-    },
-    "auth": {
-      "facebook": {
-        "id": "248217116002964",
-        "secret": "3a4d4d0b6cc55b64dbed9cbcdfd1cdea"
-      },
-      "google": {
-        "id": "35446698823-r8cah6sm4mjd9hjua0mkttstgtpf88tf.apps.googleusercontent.com",
-        "secret": "o66T879W3sV8eHMu15STmVBX"
-      },
-      "aws": {
-        "id": "AKIAJDAKEAAE2E3FOSDA",
-        "key": "Q0R6AW8Q36ndRQPN3q/wq2e/BlE8vp6BMNk0qoZt"
-      }
-    },
-    "secret": {
-      "jwt": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649",
-      "cookie": "bhVFT^R*7iyhuHVTFU^R*t798yhuGY&T*^r57DFHTGJYi7t^R&%ER^&T98OYILHGUFYCDtu6R*&TI*YOT&IYFut6rI&*UY"
+    "web": {
+      "port": "8080",
+      "host": "localhost"
     }
   },
-  "production": {
-    "tag": "production",
-    "db": {
-      "username": "root",
-      "password": "UL6WkyequehcX6rZB9zesCw8",
-      "database": "kitcode",
-      "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
-      "dialect": "mysql",
-      "operatorsAliases": false,
-      "logging": false
-    },
+  "mail": {
     "server": {
-      "run": {
-        "port": "7070",
-	"host": "localhost"
-      },
-      "api": {
-        "port": "9090",
-        "host": "localhost"
-      },
-      "web": {
-        "port": "8080",
-        "host": "localhost"
-      }
+      "host": "smtp.mail.us-east-1.awsapps.com",
+      "port": "993"
     },
-    "mail": {
-      "server": {
-        "host": "smtp.mail.us-east-1.awsapps.com",
-        "port": "993"
-      },
-      "user": "noreply@kitcode.io",
-      "password": "Noreply@2394"
+    "user": "noreply@kitcode.io",
+    "password": "Noreply@2394"
+  },
+  "auth": {
+    "facebook": {
+      "id": "248217116002964",
+      "secret": "3a4d4d0b6cc55b64dbed9cbcdfd1cdea"
     },
-    "auth": {
-      "facebook": {
-        "id": "248217116002964",
-        "secret": "3a4d4d0b6cc55b64dbed9cbcdfd1cdea"
-      },
-      "google": {
-        "id": "35446698823-r8cah6sm4mjd9hjua0mkttstgtpf88tf.apps.googleusercontent.com",
-        "secret": "o66T879W3sV8eHMu15STmVBX"
-      },
-      "aws": {
-        "id": "AKIAJDAKEAAE2E3FOSDA",
-        "key": "Q0R6AW8Q36ndRQPN3q/wq2e/BlE8vp6BMNk0qoZt"
-      }
+    "google": {
+      "id": "35446698823-r8cah6sm4mjd9hjua0mkttstgtpf88tf.apps.googleusercontent.com",
+      "secret": "o66T879W3sV8eHMu15STmVBX"
     },
-    "secret": {
-      "jwt": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649",
-      "cookie": "bhVFT^R*7iyhuHVTFU^R*t798yhuGY&T*^r57DFHTGJYi7t^R&%ER^&T98OYILHGUFYCDtu6R*&TI*YOT&IYFut6rI&*UY"
+    "aws": {
+      "id": "AKIAJDAKEAAE2E3FOSDA",
+      "key": "Q0R6AW8Q36ndRQPN3q/wq2e/BlE8vp6BMNk0qoZt"
     }
+  },
+  "secret": {
+    "jwt": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649",
+    "cookie": "bhVFT^R*7iyhuHVTFU^R*t798yhuGY&T*^r57DFHTGJYi7t^R&%ER^&T98OYILHGUFYCDtu6R*&TI*YOT&IYFut6rI&*UY"
   }
 }

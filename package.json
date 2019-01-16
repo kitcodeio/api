@@ -5,13 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "gulp serve",
     "lint": "eslint",
-    "sequelize": "sequelize",
-    "update:version": "gulp update:version",
-    "set:env:staging": "export NODE_ENV=staging",
-    "set:env:beta": "export NODE_ENV=beta",
-    "set:env:prod": "export NODE_ENV=production"
+    "migrate": "sequelize db:migrate"
   },
   "repository": {
     "type": "git",
@@ -46,6 +41,7 @@
     "eslint-config-google": "^0.11.0",
     "gulp": "^3.9.1",
     "gulp-bump": "^3.1.1",
+    "gulp-sequelize-migrations": "^2.0.1",
     "sequelize-cli": "^5.4.0",
     "yargs": "^12.0.1"
   }
