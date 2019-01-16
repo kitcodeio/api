@@ -3,9 +3,9 @@
     "tag": "beta",
     "db": {
       "username": "root",
-      "password": "UL6WkyequehcX6rZB9zesCw8",
+      "password": "root",
       "database": "kitcode",
-      "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
+      "host": "localhost",
       "dialect": "mysql",
       "operatorsAliases": false,
       "logging": false

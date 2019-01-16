@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    queryInterface.addColumn('Containers', 'base_image', {
+    return queryInterface.addColumn('Containers', 'base_image', {
       type: Sequelize.STRING,
       references: {
         model: 'Images',
@@ -14,6 +14,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    queryInterface.removeColumn('Containers', 'base_image');
+    return queryInterface.removeColumn('Containers', 'base_image');
   },
 };
