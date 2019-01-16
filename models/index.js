@@ -33,8 +33,6 @@ module.exports = function(configuration) {
   });
 
   db.sequelize = sequelize;
-  db.Sequelize = Sequelize;
 
   return db;
-
 };

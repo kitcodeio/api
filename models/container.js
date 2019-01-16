@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = (sequelize, DataTypes) => {
   var Container = sequelize.define('Container', {
     id: {
@@ -14,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: 'idle',
     },
   }, {});
+
   Container.associate = function(models) {
 
     Container.belongsTo(models.Image, {
@@ -31,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
     Container.belongsTo(models.Subdomain, {
       foreignKey: 'subdomain',
     });
-
   };
+
   return Container;
 };
