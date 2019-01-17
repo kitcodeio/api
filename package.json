@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint",
-    "migrate": "sequelize db:create && sequelize db:migrate"
+    "migrate": "npm run migrate-db-create && sequelize db:migrate && npm run migrate-seed",
+    "migrate-seed": "sequelize db:seed:all",
+    "migrate-db-create":"sequelize db:create"
   },
   "repository": {
     "type": "git",
