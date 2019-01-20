@@ -1,9 +1,9 @@
 {
   "db": {
     "username": "root",
-    "password": "root",
+    "password": "zh9QZ6JsRxAtds6O",
     "database": "kitcode",
-    "host": "localhost",
+    "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false,
     "logging": false
@@ -45,7 +45,7 @@
     }
   },
   "secret": {
-    "algorithm": "SHA256",
+    "algorithm": "md5",
     "jwt": "8364vr963293du76r$jgsdjvug%^29(*^*&%^@#$%9C^&U5ru6y$C&^igfdbdrwef&<S-F6>%HYJGK86yhI*Y(*%^9u649",
     "cookie": "bhVFT^R*7iyhuHVTFU^R*t798yhuGY&T*^r57DFHTGJYi7t^R&%ER^&T98OYILHGUFYCDtu6R*&TI*YOT&IYFut6rI&*UY"
   }
