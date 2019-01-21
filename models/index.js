@@ -24,5 +24,5 @@ module.exports = config => {
 
   return models;
 
-}
+};
 

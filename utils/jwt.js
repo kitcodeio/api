@@ -11,4 +11,4 @@ exports.generate = function (client, secret) {
     role_type: client.role_type,
     exp: parseInt(expiry.getTime() / 1000),
   }, secret);
-}
+};
