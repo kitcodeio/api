@@ -1,3 +1,5 @@
+'use strict';
+
 const crypto = require('../utils/crypto');
 const jwt = require('../utils/jwt');
 

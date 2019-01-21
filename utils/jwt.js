@@ -1,3 +1,5 @@
+'use strict';
+
 const jwt = require('jsonwebtoken');
 
 exports.generate = function (client, secret) {
