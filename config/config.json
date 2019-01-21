@@ -1,12 +1,23 @@
 {
   "db": {
-    "username": "root",
-    "password": "zh9QZ6JsRxAtds6O",
-    "database": "kitcode",
-    "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
-    "dialect": "mysql",
-    "operatorsAliases": false,
-    "logging": false
+    "local": {
+      "username": "root",
+      "password": "root",
+      "database": "root",
+      "host": "localhost",
+      "dialect": "mysql",
+      "operatorsAliases": false,
+      "logging": false
+    },
+    "production": {
+      "username": "root",
+      "password": "zh9QZ6JsRxAtds6O",
+      "database": "kitcode",
+      "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
+      "dialect": "mysql",
+      "operatorsAliases": false,
+      "logging": false
+    }
   },
   "server": {
     "run": {
