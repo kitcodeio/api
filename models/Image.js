@@ -19,6 +19,12 @@ var Image = (function() {
     } catch (err) { return; }
   };
 
+  Image.prototype.fetch = function(id) {
+    return schema.Image.findOne({
+      where: { id, },
+    });
+  };
+
   Image.prototype.fetchAll = async function(page, client_id) {
     let images;
     try {
