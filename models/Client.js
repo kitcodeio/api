@@ -3,8 +3,7 @@ const jwt = require('../utils/jwt');
 
 var Client = (function() {
 
-  var config;
-  var schema;
+  var config, schema;
 
   function Client(_config, _schema) {
     this.name = 'Client';

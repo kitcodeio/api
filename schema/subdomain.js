@@ -2,7 +2,10 @@
 module.exports = (sequelize, DataTypes) => {
   var Subdomain = sequelize.define('Subdomain', {
     salt: DataTypes.STRING,
-    occupied: DataTypes.BOOLEAN,
+    occupied: {
+      type: DataTypes.BOOLEAN,
+      default: false,
+    }
   }, {
     timestamps: false,
   });
