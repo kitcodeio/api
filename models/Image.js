@@ -29,9 +29,9 @@ var Image = (function() {
     let images;
     try {
       images = schema.Image.findAndCountAll({
-        where: { client_id, },
+        where: { client_id},
         limit: 10,
-        offset: 10 * (page - 1),
+        offset: 10 * (page - 1)
       });
       return images;
     } catch (err) { return; }

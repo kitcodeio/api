@@ -12,7 +12,7 @@ var Container = (function() {
 
   Container.prototype.fetch = async function(id) {
     return schema.Container.findOne({
-      where: { id, },
+      where: { id}
     });
   };
 
@@ -23,42 +23,42 @@ var Container = (function() {
       query = {
         where: {
           client_id,
-          base_image: id,
-        },
+          base_image: id
+        }
       };
       break;
     case 'container':
       query = {
         where: {
-          id,
+          id
         },
         include: {
           model: schema.Client,
           attributes: {
-            exclude: ['password_hash', 'salt', ],
-          },
-        },
+            exclude: ['password_hash', 'salt']
+          }
+        }
       };
       break;
     case 'client':
       query = {
         where: {
-          client_id,
-        },
+          client_id
+        }
       };
       break;
     case 'tutorial':
       query = {
         where: {
           client_id,
-          tutorial_id,
-        },
+          tutorial_id
+        }
       };
       break;
     default:
       query = {
         limit: 10,
-        offset: 10 * ((page || 1) - 1),
+        offset: 10 * ((page || 1) - 1)
       };
     }
 
