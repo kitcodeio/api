@@ -17,12 +17,11 @@ module.exports = (sequelize, DataTypes) => {
     Image.belongsTo(models.Client, {
       foreignKey: 'client_id',
     });
-    Image.hasMany(models.Course, {
-      foreignKey: 'image_id',
-    });
+
     Image.hasMany(models.Container, {
       foreignKey: 'base_image',
     });
+
     Image.hasMany(models.Tutorial, {
       foreignKey: 'image_id',
     });

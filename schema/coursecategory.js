@@ -18,16 +18,16 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false,
   });
   CourseCategory.associate = function(models) {
-    CourseCategory.hasMany(models.Course, {
-      foreignKey: 'category_id',
-    });
+
     CourseCategory.hasMany(models.CategoryVersion, {
       foreignKey: 'category_id',
       as: 'versions',
     });
+
     CourseCategory.hasMany(models.TutorialTags, {
       foreignKey: 'category_id',
     });
+
     CourseCategory.belongsTo(CourseCategory, {
       foreignKey: 'parent_id',
       as: 'parent'
