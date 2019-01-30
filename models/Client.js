@@ -33,8 +33,8 @@ var Client = (function() {
   Client.prototype.findOrCreate = async function(data) {
     let client = await schema.Client.findOne({
       where: {
-        email: data.email
-      }
+        email: data.email,
+      },
     });
 
     if (!client) {
@@ -54,28 +54,28 @@ var Client = (function() {
 
   Client.prototype.update = async function(email, data) {
     let client = await schema.Client.findOne({
-      where: { email}
+      where: { email,},
     });
 
     if (!client) return {
-      statusCode: 404
+      statusCode: 404,
     };
     let state = await schema.Client.upddate(data, {
-      where: { email}
-    }).catch(error => state = { error});
+      where: { email,},
+    }).catch(error => state = { error,});
 
     if(state.error) return state;
     
     return {
-      statusCode: 200
+      statusCode: 200,
     };
   };
 
   Client.prototype.authenticate = async function(email, password) {
     let client = await schema.Client.findOne({
       where: {
-        email: email
-      }
+        email: email,
+      },
     });
 
     if (!client) return;

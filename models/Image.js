@@ -29,12 +29,33 @@ var Image = (function() {
     let images;
     try {
       images = schema.Image.findAndCountAll({
-        where: { client_id},
+        where: { client_id,},
         limit: 10,
-        offset: 10 * (page - 1)
+        offset: 10 * (page - 1),
       });
       return images;
     } catch (err) { return; }
+  };
+
+  Image.prototype.destroy = async function(id) {
+    let image;
+    try {
+      image = await schema.Image.findOne({
+        where: { id, },
+      });
+    } catch (err) { return; }
+    
+    if (!image) return;
+
+    await schema.Image.destroy({
+      where: { id, },
+    });
+
+    return {
+      statusCode: 200,
+      message: 'image delete success',
+    };
+
   };
 
   return Image;
