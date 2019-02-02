@@ -77,6 +77,12 @@ var Container = (function() {
     }
   };
 
+  Container.prototype.delete = function(id) {
+    return schema.Container.destroy({
+      where: { id }
+    });
+  }
+
   return Container;
 
 }());
