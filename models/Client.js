@@ -60,7 +60,7 @@ var Client = (function() {
     if (!client) return {
       statusCode: 404,
     };
-    let state = await schema.Client.upddate(data, {
+    let state = await schema.Client.update(data, {
       where: { email,},
     }).catch(error => state = { error,});
 
