@@ -12,7 +12,7 @@
     "production": {
       "username": "root",
       "password": "zh9QZ6JsRxAtds6O",
-      "database": "kitcode",
+      "database": "kitcode_new",
       "host": "kitcode.cu9d8l3gkm7t.ap-south-1.rds.amazonaws.com",
       "dialect": "mysql",
       "operatorsAliases": false,
@@ -32,6 +32,9 @@
       "port": "8080",
       "host": "localhost"
     }
+  },
+  "docker": {
+    "baseImageName": "ubuntu-nginx"
   },
   "mail": {
     "server": {

@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     TutorialTags.belongsTo(models.Tutorial, {
       foreignKey: 'tutorial_id'
     });
-    TutorialTags.belongsTo(models.CourseCategory, {
+    TutorialTags.belongsTo(models.Category, {
       foreignKey: 'category_id'
     });
   };

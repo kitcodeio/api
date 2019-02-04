@@ -1,7 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var CourseCategory = sequelize.define('CourseCategory', {
-    index: DataTypes.INTEGER,
+  var Category = sequelize.define('Category', {
     label: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -17,21 +16,21 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false,
   });
-  CourseCategory.associate = function(models) {
+  Category.associate = function(models) {
 
-    CourseCategory.hasMany(models.CategoryVersion, {
+    Category.hasMany(models.CategoryVersion, {
       foreignKey: 'category_id',
       as: 'versions',
     });
 
-    CourseCategory.hasMany(models.TutorialTags, {
+    Category.hasMany(models.TutorialTags, {
       foreignKey: 'category_id',
     });
 
-    CourseCategory.belongsTo(CourseCategory, {
+    Category.belongsTo(Category, {
       foreignKey: 'parent_id',
       as: 'parent'
     });
   };
-  return CourseCategory;
+  return Category;
 };

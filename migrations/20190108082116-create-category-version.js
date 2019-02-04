@@ -11,8 +11,8 @@ module.exports = {
       category_id: {
         type: Sequelize.INTEGER,
         references: {
-	  model: 'CourseCategories',
-	  key: 'id',
+	        model: 'Categories',
+	        key: 'id',
         },
         onDelete: 'cascade',
       },
@@ -22,8 +22,8 @@ module.exports = {
       command: {
         type: Sequelize.STRING,
       },
-      default: {
-        type: Sequelize.BOOLEAN,
+      filename: {
+        type: Sequelize.STRING,
       }
     });
   },

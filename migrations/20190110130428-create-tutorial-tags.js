@@ -10,19 +10,19 @@ module.exports = {
       },
       tutorial_id: {
         type: Sequelize.STRING,
-	references: {
-	  model: 'Tutorials',
-	  key: 'id',
-	},
-	onDelete: 'cascade',
+        references: {
+          model: 'Tutorials',
+          key: 'id',
+        },
+        onDelete: 'cascade',
       },
       category_id: {
         type: Sequelize.INTEGER,
-	references: {
-	  model: 'CourseCategories',
+        references: {
+          model: 'Categories',
           key: 'id',
-	},
-	onDelete: 'set null',
+        },
+        onDelete: 'set null',
       },
     });
   },

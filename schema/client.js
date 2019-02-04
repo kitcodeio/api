@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (sequelize, DataTypes) => {
-  var Client = sequelize.define('Client', {
+  var User = sequelize.define('User', {
     id: {
       type: DataTypes.STRING,
       defaultValue: DataTypes.UUIDV4,
@@ -54,23 +54,18 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false,
-    },
-    credit: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 5,
-    },
+    }
   }, {});
-  Client.associate = function(models) {
-    Client.hasMany(models.Image, {
-      foreignKey: 'client_id',
+  User.associate = function(models) {
+    User.hasMany(models.Image, {
+      foreignKey: 'user_id',
     });
-    Client.hasMany(models.Container, {
-      foreignKey: 'client_id',
+    User.hasMany(models.Container, {
+      foreignKey: 'user_id',
     });
-    Client.hasMany(models.Tutorial, {
+    User.hasMany(models.Tutorial, {
       foreignKey: 'submitted_by',
     });
   };
-  return Client;
+  return User;
 };

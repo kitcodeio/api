@@ -10,7 +10,7 @@ module.exports = {
       submitted_by: {
         type: Sequelize.STRING,
         references: {
-          model: 'Clients',
+          model: 'Users',
           key: 'id',
         },
         onDelete: 'set null',

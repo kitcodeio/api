@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.STRING
   }, {});
   Tutorial.associate = function(models) {
-    Tutorial.belongsTo(models.Client, {
+    Tutorial.belongsTo(models.User, {
       foreignKey: 'submitted_by',
     });
     Tutorial.belongsTo(models.Image, {
