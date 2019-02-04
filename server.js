@@ -20,4 +20,5 @@ plugin.register(server, {
 }, async function() {
   await server.start();
   console.log('kitcode api server is online at http://' + config.server.api.host + ':' + config.server.api.port);
+
 });
