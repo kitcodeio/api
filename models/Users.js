@@ -3,18 +3,18 @@
 const crypto = require('../utils/crypto');
 const jwt = require('../utils/jwt');
 
-var Client = (function() {
+var User = (function() {
 
   var config, schema;
 
-  function Client(_config, _schema) {
-    this.name = 'Client';
+  function User(_config, _schema) {
+    this.name = 'User';
     config = _config;
     schema = _schema;
   }
 
-  Client.prototype.create = async function(data) {
-    let client;
+  User.prototype.create = async function(data) {
+    let user;
 
     data.salt = crypto.generateSalt();
     data.password_hash = crypto.hash(data.password, data.salt, config.secret.algorithm);
@@ -22,45 +22,45 @@ var Client = (function() {
     data.role_type = 'user';
 
     try {
-      client = await schema.Client.create(data);
-      return client;
+      user = await schema.User.create(data);
+      return user;
     } catch (err) {
 
       return;
     }
   };
 
-  Client.prototype.findOrCreate = async function(data) {
-    let client = await schema.Client.findOne({
+  User.prototype.findOrCreate = async function(data) {
+    let user = await schema.User.findOne({
       where: {
         email: data.email,
       },
     });
 
-    if (!client) {
+    if (!user) {
       data.salt = crypto.generateSalt();
       data.password_hast = crypto.hash(crypto.generateSalt(), data.salt, config.secret.algorithm);
       delete data.password;
       data.role_type = 'user';
-      client = await schema.Client.create(data);
+      user = await schema.User.create(data);
     }
 
-    delete client.salt;
-    delete client.password_hash;
-    client.jwt = jwt.generate(client, config.secret.jwt);
+    delete user.salt;
+    delete user.password_hash;
+    user.jwt = jwt.generate(user, config.secret.jwt);
     
-    return client;
+    return user;
   };
 
-  Client.prototype.update = async function(email, data) {
-    let client = await schema.Client.findOne({
+  User.prototype.update = async function(email, data) {
+    let user = await schema.User.findOne({
       where: { email,},
     });
 
-    if (!client) return {
+    if (!user) return {
       statusCode: 404,
     };
-    let state = await schema.Client.update(data, {
+    let state = await schema.User.update(data, {
       where: { email,},
     }).catch(error => state = { error,});
 
@@ -71,26 +71,24 @@ var Client = (function() {
     };
   };
 
-  Client.prototype.authenticate = async function(email, password) {
-    let client = await schema.Client.findOne({
-      where: {
-        email: email,
-      },
+  User.prototype.authenticate = async function(email, password) {
+    let user = await schema.User.findOne({
+      where: { email },
     });
 
-    if (!client) return;
-    client = client.toJSON();
-    if (crypto.hash(password, client.salt, config.secret.algorithm) !== client.password_hash) return;
+    if (!user) return;
+    user = user.toJSON();
+    if (crypto.hash(password, user.salt, config.secret.algorithm) !== user.password_hash) return;
 
-    delete client.salt;
-    delete client.password_hash;
-    client.jwt = jwt.generate(client, config.secret.jwt);
+    delete user.salt;
+    delete user.password_hash;
+    user.jwt = jwt.generate(user, config.secret.jwt);
 
-    return client;
+    return user;
   };
 
-  return Client;
+  return User;
 
 }());
 
-module.exports = Client;
+module.exports = User;

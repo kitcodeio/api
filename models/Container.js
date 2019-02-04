@@ -16,13 +16,13 @@ var Container = (function() {
     });
   };
 
-  Container.prototype.fetchAll = async function(by, id, page, client_id, tutorial_id) {
+  Container.prototype.fetchAll = async function(by, id, page, user_id, tutorial_id) {
     let query;
     switch (by) {
     case 'image':
       query = {
         where: {
-          client_id,
+          user_id,
           base_image: id,
         },
       };
@@ -33,24 +33,24 @@ var Container = (function() {
           id,
         },
         include: {
-          model: schema.Client,
+          model: schema.User,
           attributes: {
             exclude: ['password_hash', 'salt',],
           },
         },
       };
       break;
-    case 'client':
+    case 'user':
       query = {
         where: {
-          client_id,
+          user_id,
         },
       };
       break;
     case 'tutorial':
       query = {
         where: {
-          client_id,
+          user_id,
           tutorial_id,
         },
       };
