@@ -16,6 +16,12 @@ var Container = (function() {
     });
   };
 
+  Container.prototype.fetchByTutorial = async function(tutorial_id, user_id) {
+    return schema.Container.findOne({
+      where: { tutorial_id, user_id },
+    });
+  };
+
   Container.prototype.fetchAll = async function(by, id, page, user_id, tutorial_id) {
     let query;
     switch (by) {
