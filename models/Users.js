@@ -39,7 +39,7 @@ var User = (function() {
 
     if (!user) {
       data.salt = crypto.generateSalt();
-      data.password_hast = crypto.hash(crypto.generateSalt(), data.salt, config.secret.algorithm);
+      data.password_hash = crypto.hash(crypto.generateSalt(), data.salt, config.secret.algorithm);
       delete data.password;
       data.role_type = 'user';
       user = await schema.User.create(data);
