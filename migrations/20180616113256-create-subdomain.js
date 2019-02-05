@@ -6,19 +6,19 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER
       },
       salt: {
         type: Sequelize.STRING,
-        unique: true,
+        unique: true
       },
       occupied: {
         type: Sequelize.BOOLEAN,
-        default: false,
-      },
+        default: false
+      }
     });
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('Subdomains');
-  },
+  }
 };

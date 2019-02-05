@@ -11,6 +11,6 @@ exports.generate = function (user, secret) {
     email: user.email,
     image: user.image,
     role_type: user.role_type,
-    exp: parseInt(expiry.getTime() / 1000),
+    exp: parseInt(expiry.getTime() / 1000)
   }, secret);
 };

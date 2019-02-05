@@ -6,28 +6,28 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER
       },
       category_id: {
         type: Sequelize.INTEGER,
         references: {
 	        model: 'Categories',
-	        key: 'id',
+	        key: 'id'
         },
-        onDelete: 'cascade',
+        onDelete: 'cascade'
       },
       version: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       command: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       filename: {
-        type: Sequelize.STRING,
-      },
+        type: Sequelize.STRING
+      }
     });
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('CategoryVersions');
-  },
+  }
 };

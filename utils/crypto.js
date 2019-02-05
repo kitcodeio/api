@@ -11,5 +11,5 @@ module.exports = {
     hash.update(password);
     let value = hash.digest('hex');
     return value;
-  },
+  }
 };

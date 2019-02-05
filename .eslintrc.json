@@ -12,7 +12,7 @@
     "no-console": ["error", {
       "allow": ["warn", "error"]
     }],
-    "comma-dangle": ["error", "always"],
+    "comma-dangle": ["error", "never"],
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],

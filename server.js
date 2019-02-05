@@ -11,12 +11,12 @@ server.connection({
   host: config.server.api.host,
   port: config.server.api.port,
   routes: {
-    cors: true,
-  },
+    cors: true
+  }
 });
 
 plugin.register(server, {
-  config: config,
+  config: config
 }, async function() {
   await server.start();
   console.log('kitcode api server is online at http://' + config.server.api.host + ':' + config.server.api.port);

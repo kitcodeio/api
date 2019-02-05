@@ -12,13 +12,13 @@ var Container = (function() {
 
   Container.prototype.fetch = async function(id) {
     return schema.Container.findOne({
-      where: { id,},
+      where: { id}
     });
   };
 
   Container.prototype.fetchByTutorial = async function(tutorial_id, user_id) {
     return schema.Container.findOne({
-      where: { tutorial_id, user_id, },
+      where: { tutorial_id, user_id }
     });
   };
 
@@ -29,42 +29,42 @@ var Container = (function() {
       query = {
         where: {
           user_id,
-          base_image: id,
-        },
+          base_image: id
+        }
       };
       break;
     case 'container':
       query = {
         where: {
-          id,
+          id
         },
         include: {
           model: schema.User,
           attributes: {
-            exclude: ['password_hash', 'salt',],
-          },
-        },
+            exclude: ['password_hash', 'salt']
+          }
+        }
       };
       break;
     case 'user':
       query = {
         where: {
-          user_id,
-        },
+          user_id
+        }
       };
       break;
     case 'tutorial':
       query = {
         where: {
           user_id,
-          tutorial_id,
-        },
+          tutorial_id
+        }
       };
       break;
     default:
       query = {
         limit: 10,
-        offset: 10 * ((page || 1) - 1),
+        offset: 10 * ((page || 1) - 1)
       };
     }
 
@@ -85,7 +85,7 @@ var Container = (function() {
 
   Container.prototype.delete = function(id) {
     return schema.Container.destroy({
-      where: { id, },
+      where: { id }
     });
   };
 
