@@ -22,8 +22,8 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'base_image',
     });
 
-    Container.belongsTo(models.Client, {
-      foreignKey: 'client_id',
+    Container.belongsTo(models.User, {
+      foreignKey: 'user_id',
     });
 
     Container.belongsTo(models.Tutorial, {

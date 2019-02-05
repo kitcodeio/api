@@ -30,20 +30,20 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
     },
-    status: DataTypes.STRING
+    status: DataTypes.STRING,
   }, {});
   Tutorial.associate = function(models) {
-    Tutorial.belongsTo(models.Client, {
+    Tutorial.belongsTo(models.User, {
       foreignKey: 'submitted_by',
     });
     Tutorial.belongsTo(models.Image, {
       foreignKey: 'image_id',
     });
     Tutorial.hasMany(models.TutorialTags, {
-      foreignKey: 'tutorial_id'
+      foreignKey: 'tutorial_id',
     });
     Tutorial.hasMany(models.Container, {
-      foreignKey: 'tutorial_id'
+      foreignKey: 'tutorial_id',
     });
   };
   return Tutorial;

@@ -10,10 +10,10 @@ var Image = (function() {
     schema = _schema;
   }
 
-  Image.prototype.create = async function(client_id, label) {
+  Image.prototype.create = async function(user_id, label) {
     let image;
     try {
-      image = await schema.Image.create({ client_id, label, });
+      image = await schema.Image.create({ user_id, label, });
 
       return image;
     } catch (err) { return; }
@@ -25,11 +25,11 @@ var Image = (function() {
     });
   };
 
-  Image.prototype.fetchAll = async function(page, client_id) {
+  Image.prototype.fetchAll = async function(page, user_id) {
     let images;
     try {
       images = schema.Image.findAndCountAll({
-        where: { client_id,},
+        where: { user_id,},
         limit: 10,
         offset: 10 * (page - 1),
       });

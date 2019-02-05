@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
   }, {});
   Image.associate = function(models) {
-    Image.belongsTo(models.Client, {
-      foreignKey: 'client_id',
+    Image.belongsTo(models.User, {
+      foreignKey: 'user_id',
     });
 
     Image.hasMany(models.Container, {

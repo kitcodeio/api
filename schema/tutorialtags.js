@@ -2,14 +2,14 @@
 module.exports = (sequelize, DataTypes) => {
   const TutorialTags = sequelize.define('TutorialTags', {
   }, {
-    timestamps: false
+    timestamps: false,
   });
   TutorialTags.associate = function(models) {
     TutorialTags.belongsTo(models.Tutorial, {
-      foreignKey: 'tutorial_id'
+      foreignKey: 'tutorial_id',
     });
-    TutorialTags.belongsTo(models.CourseCategory, {
-      foreignKey: 'category_id'
+    TutorialTags.belongsTo(models.Category, {
+      foreignKey: 'category_id',
     });
   };
   return TutorialTags;

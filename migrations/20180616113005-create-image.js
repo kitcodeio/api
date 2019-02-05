@@ -15,11 +15,11 @@ module.exports = {
       description: {
         type: Sequelize.STRING,
       },
-      client_id: {
+      user_id: {
         type: Sequelize.STRING,
         allowNull: false,
         references: {
-          model: 'Clients',
+          model: 'Users',
           key: 'id',
         },
       },

@@ -10,14 +10,14 @@ module.exports = {
       submitted_by: {
         type: Sequelize.STRING,
         references: {
-          model: 'Clients',
+          model: 'Users',
           key: 'id',
         },
         onDelete: 'set null',
       },
       label: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
       },
       link: {
         type: Sequelize.STRING,
@@ -52,6 +52,9 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
+      },
+      status: {
+        type: Sequelize.STRING,
       },
     });
   },

@@ -7,18 +7,26 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.STRING,
       },
-      course_id: {
-        type: Sequelize.INTEGER,
+      base_image: {
+        type: Sequelize.STRING,
         references: {
-          model: 'Courses',
+          model: 'Images',
           key: 'id',
         },
         onDelete: 'set null',
       },
-      client_id: {
+      tutorial_id: {
         type: Sequelize.STRING,
         references: {
-          model: 'Clients',
+          model: 'Tutorials',
+          key: 'id',
+        },
+        onDelete: 'set null',
+      },
+      user_id: {
+        type: Sequelize.STRING,
+        references: {
+          model: 'Users',
           key: 'id',
         },
       },

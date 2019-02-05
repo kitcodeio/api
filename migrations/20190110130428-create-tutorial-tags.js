@@ -6,27 +6,27 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       tutorial_id: {
         type: Sequelize.STRING,
-	references: {
-	  model: 'Tutorials',
-	  key: 'id',
-	},
-	onDelete: 'cascade',
+        references: {
+          model: 'Tutorials',
+          key: 'id',
+        },
+        onDelete: 'cascade',
       },
       category_id: {
         type: Sequelize.INTEGER,
-	references: {
-	  model: 'CourseCategories',
+        references: {
+          model: 'Categories',
           key: 'id',
-	},
-	onDelete: 'set null',
+        },
+        onDelete: 'set null',
       },
     });
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('TutorialTags');
-  }
+  },
 };
