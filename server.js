@@ -2,7 +2,7 @@ const Hapi = require('hapi');
 
 const plugin = require('./index');
 const config = require('./config/config.json');
-const env = require("./.env.json").env;
+const env = require('./.env.json').env;
 
 config.db = config.db[env];
 

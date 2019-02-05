@@ -18,7 +18,7 @@ var Container = (function() {
 
   Container.prototype.fetchByTutorial = async function(tutorial_id, user_id) {
     return schema.Container.findOne({
-      where: { tutorial_id, user_id },
+      where: { tutorial_id, user_id, },
     });
   };
 
@@ -85,9 +85,9 @@ var Container = (function() {
 
   Container.prototype.delete = function(id) {
     return schema.Container.destroy({
-      where: { id }
+      where: { id, },
     });
-  }
+  };
 
   return Container;
 

@@ -73,7 +73,7 @@ var User = (function() {
 
   User.prototype.authenticate = async function(email, password) {
     let user = await schema.User.findOne({
-      where: { email },
+      where: { email, },
     });
 
     if (!user) return;

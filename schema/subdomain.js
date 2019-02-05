@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     occupied: {
       type: DataTypes.BOOLEAN,
       default: false,
-    }
+    },
   }, {
     timestamps: false,
   });

@@ -14,7 +14,7 @@ module.exports = {
       },
       occupied: {
         type: Sequelize.BOOLEAN,
-	default: false,
+        default: false,
       },
     });
   },

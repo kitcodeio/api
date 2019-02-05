@@ -17,7 +17,7 @@ module.exports = {
       },
       label: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
       },
       link: {
         type: Sequelize.STRING,
@@ -55,7 +55,7 @@ module.exports = {
       },
       status: {
         type: Sequelize.STRING,
-      }
+      },
     });
   },
   down: (queryInterface, Sequelize) => {

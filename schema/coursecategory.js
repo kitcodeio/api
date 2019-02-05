@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Category.belongsTo(Category, {
       foreignKey: 'parent_id',
-      as: 'parent'
+      as: 'parent',
     });
   };
   return Category;
