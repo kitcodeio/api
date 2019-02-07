@@ -3,33 +3,33 @@ module.exports = (sequelize, DataTypes) => {
   var Category = sequelize.define('Category', {
     label: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     logo: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     visibility: {
       type: DataTypes.BOOLEAN,
-      defaultValue: true,
-    },
+      defaultValue: true
+    }
   }, {
-    timestamps: false,
+    timestamps: false
   });
   Category.associate = function(models) {
 
     Category.hasMany(models.CategoryVersion, {
       foreignKey: 'category_id',
-      as: 'versions',
+      as: 'versions'
     });
 
     Category.hasMany(models.TutorialTags, {
-      foreignKey: 'category_id',
+      foreignKey: 'category_id'
     });
 
     Category.belongsTo(Category, {
       foreignKey: 'parent_id',
-      as: 'parent',
+      as: 'parent'
     });
   };
   return Category;

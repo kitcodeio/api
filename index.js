@@ -9,7 +9,7 @@ exports.register = async function(plugin, options, next) {
   const config = options.config;
   const io = new Socket(config, plugin.listener).io;
 
-  await plugin.register([Inert, JWT, Cookie,]);
+  await plugin.register([Inert, JWT, Cookie]);
   strategy.register(plugin, config);
   plugin.route(Routes(config, io));
 
@@ -17,5 +17,5 @@ exports.register = async function(plugin, options, next) {
 };
 
 exports.register.attributes = {
-  pkg: require('./package.json'),
+  pkg: require('./package.json')
 };

@@ -6,7 +6,7 @@ module.exports = {
         allowNull: false,
         primaryKey: true,
         unique: true,
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       name: {
         type: Sequelize.STRING,
@@ -14,67 +14,67 @@ module.exports = {
         validate: {
           is: {
             args: /^([^0-9!<@#$%^,&*\-`~()_+=\/\\?}\]{\[>]*)$/,
-            msg: 'oops! that doesn\'t look like a real name',
-          },
-        },
+            msg: 'oops! that doesn\'t look like a real name'
+          }
+        }
       },
       email: {
         type: Sequelize.STRING,
         unique: true,
         allowNull: false,
         validate: {
-          isEmail: true,
-        },
+          isEmail: true
+        }
       },
       phone: {
         type: Sequelize.STRING,
-        unique: true,
+        unique: true
       },
       image: {
         type: Sequelize.STRING,
         allowNull: false,
-        defaultValue: 'http://cdn.kitcode.io/default_pro_pic.png',
+        defaultValue: 'http://cdn.kitcode.io/default_pro_pic.png'
       },
       role_type: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       github: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       twitter: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       google: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       facebook: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       password_hash: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       salt: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       verified: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
-        defaultValue: false,
+        defaultValue: false
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE,
+        type: Sequelize.DATE
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE,
-      },
+        type: Sequelize.DATE
+      }
     });
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('Users');
-  },
+  }
 };

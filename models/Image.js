@@ -13,15 +13,15 @@ var Image = (function() {
   Image.prototype.create = async function(user_id, label) {
     let image;
     try {
-      image = await schema.Image.create({ user_id, label, });
+      image = await schema.Image.create({ user_id, label });
 
       return image;
     } catch (err) { return; }
   };
 
-  Image.prototype.fetch = function(id) {
+  Image.prototype.fetch = function(query) {
     return schema.Image.findOne({
-      where: { id, },
+      where: query
     });
   };
 
@@ -29,9 +29,9 @@ var Image = (function() {
     let images;
     try {
       images = schema.Image.findAndCountAll({
-        where: { user_id,},
+        where: { user_id},
         limit: 10,
-        offset: 10 * (page - 1),
+        offset: 10 * (page - 1)
       });
       return images;
     } catch (err) { return; }
@@ -41,19 +41,19 @@ var Image = (function() {
     let image;
     try {
       image = await schema.Image.findOne({
-        where: { id, },
+        where: { id }
       });
     } catch (err) { return; }
     
     if (!image) return;
 
     await schema.Image.destroy({
-      where: { id, },
+      where: { id }
     });
 
     return {
       statusCode: 200,
-      message: 'image delete success',
+      message: 'image delete success'
     };
 
   };

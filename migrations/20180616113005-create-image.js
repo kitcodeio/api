@@ -5,35 +5,35 @@ module.exports = {
       id: {
         allowNull: false,
         primaryKey: true,
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       label: {
         type: Sequelize.STRING,
         defaultValue: 'Untitled',
-        allowNull: false,
+        allowNull: false
       },
       description: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       user_id: {
         type: Sequelize.STRING,
         allowNull: false,
         references: {
           model: 'Users',
-          key: 'id',
-        },
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE,
+        type: Sequelize.DATE
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE,
-      },
+        type: Sequelize.DATE
+      }
     });
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('Images');
-  },
+  }
 };

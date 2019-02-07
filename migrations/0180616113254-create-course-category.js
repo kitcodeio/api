@@ -6,30 +6,30 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER
       },
       label: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       }, 
       parent_id: {
         type: Sequelize.INTEGER,
         references: {
           model: 'Categories',
-          key: 'id',
-        },
+          key: 'id'
+        }
       },
       logo: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       visibility: {
         type: Sequelize.BOOLEAN,
-        defaultValue: true, 
-      },
+        defaultValue: true 
+      }
     });
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('CourseCategories');
-  },
+  }
 };

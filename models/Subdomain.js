@@ -15,7 +15,7 @@ var Subdomain = (function() {
   Subdomain.prototype.create = async function(salt) {
     let subdomain;
     try{
-      subdomain = await schema.Subdomain.create({ salt, });
+      subdomain = await schema.Subdomain.create({ salt });
     } catch(err) { return; }
   
     return subdomain;
@@ -27,7 +27,7 @@ var Subdomain = (function() {
     try{ 
       subdomains = await  schema.Subdomain.findAndCountAll({
         limit: 10,
-        offset: 10 * (page - 1),
+        offset: 10 * (page - 1)
       });
     } catch(err) { return; }
 
@@ -40,11 +40,11 @@ var Subdomain = (function() {
     try {
       subdomain = await schema.Subdomain.findOne({
         where: {
-          occupied: false,
+          occupied: false
         },
         order: [
-          Sequelize.fn('RAND'),
-        ],
+          Sequelize.fn('RAND')
+        ]
       });
 
       return subdomain;

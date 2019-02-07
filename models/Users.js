@@ -33,8 +33,8 @@ var User = (function() {
   User.prototype.findOrCreate = async function(data) {
     let user = await schema.User.findOne({
       where: {
-        email: data.email,
-      },
+        email: data.email
+      }
     });
 
     if (!user) {
@@ -54,26 +54,26 @@ var User = (function() {
 
   User.prototype.update = async function(email, data) {
     let user = await schema.User.findOne({
-      where: { email,},
+      where: { email}
     });
 
     if (!user) return {
-      statusCode: 404,
+      statusCode: 404
     };
     let state = await schema.User.update(data, {
-      where: { email,},
-    }).catch(error => state = { error,});
+      where: { email}
+    }).catch(error => state = { error});
 
     if(state.error) return state;
     
     return {
-      statusCode: 200,
+      statusCode: 200
     };
   };
 
   User.prototype.authenticate = async function(email, password) {
     let user = await schema.User.findOne({
-      where: { email, },
+      where: { email }
     });
 
     if (!user) return;

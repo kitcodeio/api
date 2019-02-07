@@ -4,14 +4,14 @@ module.exports = (sequelize, DataTypes) => {
     salt: DataTypes.STRING,
     occupied: {
       type: DataTypes.BOOLEAN,
-      default: false,
-    },
+      default: false
+    }
   }, {
-    timestamps: false,
+    timestamps: false
   });
   Subdomain.associate = function(models) {
     Subdomain.hasMany(models.Container,{
-      foreignKey: 'subdomain',
+      foreignKey: 'subdomain'
     });
   };
   return Subdomain;
