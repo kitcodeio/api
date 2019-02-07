@@ -19,9 +19,9 @@ var Image = (function() {
     } catch (err) { return; }
   };
 
-  Image.prototype.fetch = function(id) {
+  Image.prototype.fetch = function(query) {
     return schema.Image.findOne({
-      where: { id }
+      where: query
     });
   };
 
