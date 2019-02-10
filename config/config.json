@@ -36,6 +36,9 @@
   "docker": {
     "baseImageName": "ubuntu-nginx"
   },
+  "kide":{
+     "path": "servers/kide/" 
+  },
   "mail": {
     "server": {
       "host": "smtp.mail.us-east-1.awsapps.com",
