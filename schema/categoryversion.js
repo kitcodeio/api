@@ -2,7 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   const CategoryVersion = sequelize.define('CategoryVersion', {
     version: DataTypes.STRING,
-    command: DataTypes.STRING,
+    command: DataTypes.TEXT,
     filename: DataTypes.STRING
   }, {
     timestamps: false
