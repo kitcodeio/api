@@ -20,7 +20,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       command: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       filename: {
         type: Sequelize.STRING
