@@ -2,6 +2,7 @@
 
 const crypto = require('../utils/crypto');
 const jwt = require('../utils/jwt');
+const request = require('request-promise-native');
 
 var User = (function() {
 
@@ -14,14 +15,18 @@ var User = (function() {
   }
 
   User.prototype.create = async function(data) {
-    let user;
+    let user, email_provider;
 
+    email_provider = data.email.split('@')[1];
     data.salt = crypto.generateSalt();
     data.password_hash = crypto.hash(data.password, data.salt, config.secret.algorithm);
     delete data.password;
     data.role_type = 'user';
 
     try {
+      let res = await request.get(`https://open.kickbox.com/v1/disposable/${email_provider}`);
+      let { disposable } = JSON.parse(res || '{}');
+      if (disposable) return 'temporary_email';
       user = await schema.User.create(data);
       return user;
     } catch (err) {
