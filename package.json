@@ -21,7 +21,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/kitcodestarlly/kitcode-server#readme",
   "dependencies": {
-    "aws-sdk": "^2.299.0",
+    "aws-sdk": "^2.814.0",
     "hapi": "^16.6.3",
     "hapi-auth-cookie": "^6.1.1",
     "hapi-auth-jwt2": "^7.4.1",
