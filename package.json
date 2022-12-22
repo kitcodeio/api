@@ -27,7 +27,7 @@
     "hapi-auth-jwt2": "^7.4.1",
     "inert": "^4.2.1",
     "ioredis": "^4.3.0",
-    "jsonwebtoken": "^8.3.0",
+    "jsonwebtoken": "^9.0.0",
     "mysql2": "^1.6.1",
     "nodemailer": "^4.7.0",
     "request": "^2.88.0",
